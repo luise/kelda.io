@@ -298,7 +298,7 @@ h4{
 	border-top-right-radius: 5px;
 	min-height: 150px;
 	font-size: 1em;
-	font-family: 'OpenSans-Light';
+	font-family: 'Courier New', monospace;
 }
 .todo{
 	margin: 2.5em 0 1em;
