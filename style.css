@@ -1,0 +1,724 @@
+@font-face {
+	font-family: 'Molengo-Regular';
+	src: url('assets/fonts/Molengo/Molengo-Regular.woff') format('woff'),
+		 url('assets/fonts/Molengo/Molengo-Regular.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans-ExtraBold';
+	src: url('assets/fonts/Open_Sans/OpenSans-ExtraBold.woff') format('woff'),
+		 url('assets/fonts/Open_Sans/OpenSans-ExtraBold.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('assets/fonts/Open_Sans/OpenSans-Bold.woff') format('woff'),
+		 url('assets/fonts/Open_Sans/OpenSans-Bold.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url('assets/fonts/Open_Sans/OpenSans-Semibold.woff') format('woff'),
+		 url('assets/fonts/Open_Sans/OpenSans-Semibold.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('assets/fonts/Open_Sans/OpenSans-Regular.woff') format('woff'),
+		 url('assets/fonts/Open_Sans/OpenSans-Regular.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('assets/fonts/Open_Sans/OpenSans-Light.woff') format('woff'),
+		 url('assets/fonts/Open_Sans/OpenSans-Light.ttf')  format('truetype');
+}
+html,
+body{
+	font-family: 'OpenSans-Regular';
+	background-color: #43424d;
+}
+p{
+	margin: 0;
+}
+ul {
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+h1{
+	font-size: 8em;
+	color: #fff;
+	margin-bottom: .3em;
+	letter-spacing: -0.05em;
+	font-family: 'Molengo-Regular';
+}
+h2{
+	font-size: 2em;
+	font-family: 'OpenSans-Regular';
+}
+h3{
+	font-size: 1.3em;
+	font-family: 'OpenSans-Semibold';
+}
+h4{
+	font-size: 1.1em;
+}
+.font-size-2{
+	font-size: 1.6em;
+}
+.font-size-1-3{
+	font-size: 1.3em;
+}
+.bg-section{
+	background-color: #f7fafd;
+}
+.bg-transparent{
+	background-color: transparent !important;
+}
+.bg-white{
+	background-color: #fff;
+}
+.color-red{
+	color: #d37d6c;
+}
+.color-green{
+	color: #91bb78;
+}
+.color-blue{
+	color: #526f9e;
+}
+.color-comment{
+	color: #a7a7a7;
+}
+.color-gray{
+	color: #8c8c9e;
+}
+.color-black{
+	color: #262626;
+}
+.btn-red{
+	background-color: #d37d6c;
+	color: #fff;
+	text-transform: uppercase;
+	padding: .6em 1.5em;
+	font-family: 'OpenSans-Bold';
+	margin: .8em 0;
+	font-size: .9em;
+}
+.padding-0{
+	padding: 0;
+}
+.height-140{
+	min-height: 140px !important;
+}
+
+/*  NAV  */
+
+.navbar{
+	margin: 0;
+	z-index: 1000;
+	background-color: #fff;
+	position: fixed;
+	height: 45px;
+	width: 100%;
+}
+.navbar-brand{
+	color: #333;
+	font-family: 'Molengo-Regular';
+}
+.nav li a {
+	color: #333;
+}
+.nav li img {
+	margin-left: .5em;
+}
+.nav>li>a:focus, 
+.nav>li>a:hover {
+	background-color: transparent !important;
+	font-weight: bold;
+}
+.border-bottom{
+	border-bottom: 1px solid #6b6a7e;
+}
+
+/*  SECTION - MAIN SECTION  */
+
+.section-main{
+	background-color: #7f7f97;
+	padding: 6em 0 5em;
+}
+.section-main .container{
+	position: relative;
+}
+.left-side{
+	z-index: 2;
+	position: relative;
+}
+.circle1 {
+	border: 1px solid #b5b4cb;
+	display: inline-block;
+	background: #b9b9cf;
+	border-radius: 50%;
+	height: 63em;
+	width: 63em;
+	top: -90%;
+	left: -15%;
+	z-index: 0;
+	position: absolute;
+}
+.circle2 {
+	display: inline-block;
+	background: #b9b9cf;
+	border-radius: 50%;
+	margin: 3em -8em;
+	height: 31em;
+	width: 31em;
+	top: -12%;
+	left: 60%;
+	position: absolute;
+	z-index: 0;
+}
+.left-side{
+	padding-right: 2em;
+}
+.first-paragraph{
+	font-family: 'OpenSans-Semibold';
+	font-size: 1.15em;
+	line-height: 1.4em;
+	margin-bottom: 1em;
+	color: #fff;
+}
+.second-paragraph{
+	font-size: 1em;
+	line-height: 1.6em;
+	margin-bottom: 1.3em;
+	color: #fff;
+}
+.mac{
+	margin-top: 4em;
+	background-image: url(assets/images/mac.png);
+	background-size: 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	height: 350px;
+	color: #fff;
+	font-family: 'Molengo-Regular';
+	padding: 4.5em 6.8em;
+	font-size: .9em;
+	position: relative;
+	z-index: 5;
+}
+.number{
+	color: #5e5e6e;
+}
+
+/*  SECTION - QUILT IS GREAT FOR  */
+
+.section-great{
+	padding: 6em 0 5em;
+}
+.square{
+	box-shadow: 0px 0px 20px 1px #f1f1f4;
+	padding: 2.5em 3em 0;
+	margin-top: 3em;
+	min-height: 390px;
+	margin: 3em 1em 2em;
+}
+.square img{
+	margin: 1em 0;
+}
+.square ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.square ul li {
+	padding-left: 1em; 
+	text-indent: -.7em;
+	font-size: 1em;
+	line-height: 1.3em;
+	margin-top: 1.2em;
+}
+.square ul li::before {
+	content: "• ";
+	color: #d37d6c;
+}
+.strong{
+	font-family: 'OpenSans-Semibold';
+	font-size: 1.1em;
+	margin-top: 1.5em;
+}
+
+/*  SECTION - QUILT IN ACTION  */
+
+.section-action{
+	padding: 5em 0;
+}
+.section-action h2{
+	padding-bottom: 1.4em;
+}
+.left-menu li{
+	padding: .9em 1em .8em;	
+}
+.left-menu a:hover,
+.left-menu a:focus,
+.left-menu a:active,
+.left-menu a.active {
+	background-color: #fff;
+	color: #808196;
+	border-radius: 4px;
+	box-shadow: 0px 0px 6px 0px #d5d5e5;
+	font-family: 'OpenSans-Semibold';
+	outline: none;
+}
+.left-menu a li:focus{
+	outline: none;
+}
+.left-menu a{
+	color: #333;
+	text-decoration: none;
+	font-size: .9em;
+	display: block;
+	margin: 3px 0;
+}
+.code-number{
+	text-align: center;
+	background-color: #dadaef;
+	padding: 1em 0;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	min-height: 150px;
+	line-height: 1.7em;
+	color: #8c8ca2;
+	font-size: 1em;
+	font-family: 'OpenSans-Light';
+}
+.code{
+	background-color: #fff;
+	padding: 1em 1.5em;
+	line-height: 1.7em;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	min-height: 150px;
+	font-size: 1em;
+	font-family: 'OpenSans-Light';
+}
+.todo{
+	margin: 2.5em 0 1em;
+}
+.command-line{
+	background-color: #fff;
+	border: 1px solid #f1f2f2;
+	padding: .4em .8em .5em;
+	font-family: 'OpenSans-Light';
+	font-size: .65em;
+	border-radius: 4px;
+	vertical-align: top;
+}
+.diagram{
+	margin: -3em 0 2em;
+}
+
+/*  SECTION - GETTING STARTED  */
+
+.section-started{
+	padding: 5em 0;
+}
+.section-started h2{
+	padding-bottom: 1.4em;
+}
+.section-started p{
+	font-family: 'OpenSans-Semibold';
+	font-size: 1em;
+}
+.max-height-65{
+	max-height: 65px;
+	margin-bottom: 10px;
+}
+.max-height-50{
+	max-height: 50px;
+	margin-bottom: 10px;
+	margin-top: 15px;
+}
+
+/*  SECTION - GITHUB  */
+
+.section-github{
+	padding: 10em 0 5em;
+}
+.github{
+	position: relative;
+	background-color: #fff;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 4em 0 1.5em;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px 0px #d5d5e5;
+}
+.github .icon{
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+.github img{
+	background-color: #fff;
+	border-radius: 50%;
+	padding: 2em;
+	box-shadow: 0px -10px 20px -10px #d5d5e5;
+}
+	
+/*  FOOTER  */
+
+footer{
+	background-color: #43424d;
+	padding: 2em 0 1.5em;	
+}
+footer p{
+	color: #d1d1d1;
+	font-size: .9em;
+}
+
+/*  TYPEWRITER ANIMATION   */
+
+.typewriter ul li,
+.one{
+	white-space: nowrap;
+	overflow: hidden;
+	width: 30em;	 
+}
+.one{
+	animation: appear .8s steps(500, end);
+}
+.two{
+	animation: type2 .9s steps(60, end);
+}
+.three{
+	animation: appear 1s steps(500, end);
+}
+.four{
+	animation: type2 1.4s steps(60, end);
+}
+.five{
+	animation: appear 1.2s steps(500, end);
+}
+.six{
+	animation: type2 1.9s steps(60, end);
+}
+.seven{
+	animation: type2 2.8s steps(60, end);
+}
+.eight{
+	animation: appear 2.1s steps(500, end);
+}
+.nine{
+	animation: type2 3.8s steps(500, end);
+}
+
+.typing{
+	animation: blink 1s infinite;
+	color: #fff;
+}
+
+@keyframes appear{
+	from { opacity: 0; }
+	  to { opacity: 1; }
+} 
+
+@-webkit-keyframes type2{
+	0%{width: 0;}
+	50%{width: 0;}
+	100%{ width: 100; }
+} 
+
+@keyframes type2{
+	0%{width: 0;}
+	50%{width: 0;}
+	100%{ width: 100; }
+} 
+
+@keyframes blink{
+	50% { border-color: white;}
+}
+
+/*****   INNER PAGE - JOBS   *****/
+
+
+/* SECTION - WE'RE HIRING  */
+
+.section-hiring{
+	padding: 6em 0 5em;
+}
+.paragraph{
+	margin: 9em 1em 0;
+	text-align: center;
+}
+.paragraph p{
+	max-width: 400px;
+	margin: 0 auto;
+}
+.square-jobs{
+	background-color: #fff;
+	box-shadow: 0px 0px 20px 1px #f1f1f4;
+	padding: 1.2em 0 2em;
+	margin-top: 3em;
+	text-align: center;
+}
+
+/*  SECTION - GITHUB  */
+
+.section-jobs-github{
+	padding: 4em 0 3em;
+}
+
+.square-jobs .contact{
+	padding: 1em 0 2em;
+}
+
+/*****   INNER PAGE - TEAM   *****/
+
+.square-profile{
+	background-color: #fff;
+	box-shadow: 0px 0px 20px 1px #f1f1f4;
+	padding: 1.5em 1em;
+	margin-top: 1.5em;
+	text-align: center;
+}
+.square-profile .profile {
+	border-radius: 50%;
+	max-width: 120px;
+	position: relative;
+	z-index: 1;
+}
+.square-profile .name{
+	font-family: 'OpenSans-Semibold';
+	margin: 15px 0 10px;
+}
+.square-profile h5{
+	font-family: 'OpenSans-Semibold';
+	margin: 5px 0;
+	font-size: .9em;
+}
+.square-profile p{
+	font-size: .9em;
+}
+.section-team {
+	padding: 5em 0 4em;
+}
+.square-profile .images{
+	position: relative;
+	display: inline-block;
+}
+.facebook,
+.twitter{
+	padding: 8px;
+	z-index: 0;
+	position: absolute;
+	display: none;
+	height: 45px;
+}
+.square-profile .images:hover .facebook,
+.square-profile .images:hover .twitter{
+	display: block;
+}
+.facebook{
+	top: -5px;
+	right: -19px;
+}
+.twitter{
+	top: 40px;
+	right: -33px;
+}
+
+@media (max-width: 349px) {
+	.section-main .container {
+	    padding: 0;
+	}
+	.mac {
+		margin-top: 3em;
+		background-size: 99%;
+		background-position: 50% 0px;
+		height: 225px;
+		padding: 3em 4.7em 0;
+		font-size: .7em;
+	}
+	.left-side {
+	    padding: 0 2em;
+	}
+}
+@media (min-width: 350px) and (max-width: 400px) {
+	.section-main .container {
+	    padding: 0;
+	}
+	.mac {
+		margin-top: 3em;
+		background-size: 99%;
+		background-position: 50% 0px;
+		height: 260px;
+		padding: 3em 5.2em 0;
+		font-size: .8em;
+	}
+	.left-side {
+	    padding: 0 2em;
+	}
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+	.section-main .container {
+	    padding: 0;
+	}
+	.mac {
+		margin-top: 3em;
+		background-size: 99%;
+		background-position: 50% 0px;
+		height: 300px;
+		padding: 3em 5.2em 0;
+		font-size: .9em;
+	}
+	.left-side {
+	    padding: 0 2em;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 800px){
+	.mac {
+	    margin-top: 3em;
+	    height: 425px;
+	    padding: 4.5em 6.8em;
+	    font-size: 1.2em;
+	}
+	.circle1,
+	.circle2{
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	h1 {
+		font-size: 6em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1.1em;
+	}
+	span.icon-bar {
+		background-color: #7f7f97;
+	}
+	.navbar-collapse {
+		padding: 0;
+	}
+	.navbar-nav {
+		background-color: #fff;
+		text-align: center;
+		margin: 0;
+	}
+	.first-paragraph {
+		font-size: 1.05em;
+	}
+	.section-main {
+		background-color: #7f7f97;
+		padding: 6em 0 0em;
+	}
+	.col-xs-2.col-sm-1.padding-0.text-center {
+		display: none;
+	}
+	.typewriter {
+		padding-left: 6%;
+		width: 100%;
+	}
+	.typewriter ul li, .one {
+		white-space: normal;
+		overflow: hidden;
+		width: auto;
+		animation: none;
+		line-height: 1.2em;
+		margin-bottom: 0.15em;
+	}
+	.section-great {
+		padding: 3em 0 2em;
+	}
+	.circle1,
+	.circle2{
+		display: none;
+	}
+	.strong {
+		font-size: 1em;
+		margin-top: 1.2em;
+	}
+	.square {
+		padding: 1.5em 1.5em 2em;
+		min-height: 330px;
+		margin: 2em 0 2em;
+	}
+	.square img {
+		height: 50px;
+	}
+	.square ul li {
+		font-size: .9em;
+	}
+	.section-action,
+	.section-started {
+		padding: 3em 0;
+	}
+	.section-action h2 {
+		padding-bottom: 0.5em;
+	}
+	.code-number {
+		min-height: 165px;
+		font-size: .9em;
+	}
+	.code {
+		padding: 1em .8em;
+		line-height: 1.5em;
+		min-height: 165px;
+		font-size: .9em;
+	}
+	.max-height-65 {
+		max-height: 45px;
+	}
+	.section-started button {
+		margin-bottom: 3em;
+	}
+	.section-github {
+		padding: 7em 0px 3em;
+	}
+	.github {
+		padding: 3em 0 1.5em;
+		max-width: 275px;
+	}
+	.github img {
+		background-color: #fff;
+		border-radius: 50%;
+		height: 100px;
+		padding: 1em;
+	}
+	.font-size-2 {
+		font-size: 1.2em;
+	}
+	.paragraph {
+		margin: 1.7em 1em 1em;
+	}
+	.paragraph p{
+		max-width: 350px;
+		font-size: .8em;
+	}
+	.square-jobs {
+		padding: .5em 0 1.3em;
+		margin-top: 2em;
+	}
+	.square-jobs .contact {
+		padding: 1em 0;
+	}
+	.contact img {
+		height: 35px;
+	}
+	.section-hiring,
+	.section-team {
+		padding: 5em 0 3em;
+	}
+	.section-jobs-github {
+		padding: 3em 0 2em;
+	}
+	.section-jobs-github img {
+		height: 65px;
+	}
+}
