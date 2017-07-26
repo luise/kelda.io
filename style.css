@@ -220,7 +220,7 @@ h4{
 }
 .square{
 	box-shadow: 0px 0px 20px 1px #f1f1f4;
-	padding: 2.5em 3em 0;
+	padding: 2.5em 3em 2em;
 	margin-top: 3em;
 	min-height: 390px;
 	margin: 3em 1em 2em;
@@ -288,7 +288,7 @@ h4{
 	padding: 1em 0;
 	border-bottom-left-radius: 5px;
 	border-top-left-radius: 5px;
-	min-height: 150px;
+	min-height: 160px;
 	line-height: 1.7em;
 	color: #8c8ca2;
 	font-size: 1em;
@@ -300,7 +300,7 @@ h4{
 	line-height: 1.7em;
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
-	min-height: 150px;
+	min-height: 160px;
 	font-size: 1em;
 	font-family: 'Courier New', monospace;
 }
@@ -532,25 +532,31 @@ footer p{
 }
 
 @media (max-width: 349px) {
-	.section-main .container {
-	    padding: 0;
-	}
 	.mac {
 		margin-top: 3em;
-		background-size: 99%;
+		background-size: 99.5%;
 		background-position: 50% 0px;
 		height: 225px;
-		padding: 3em 4.7em 0;
+		padding: 2.7em 4.7em 0;
 		font-size: .7em;
 	}
-	.left-side {
-	    padding: 0 2em;
+	.code-number {
+		min-height: 165px;
+		width: 5%;
+		margin-left: 2.5%;
+	}
+	.code-number ul{
+		display: none;
+	}
+	.code {
+		padding: 1em .8em;
+		line-height: 1.5em;
+		min-height: 165px;
+		font-size: .82em;
+		width: 90%;
 	}
 }
 @media (min-width: 350px) and (max-width: 400px) {
-	.section-main .container {
-	    padding: 0;
-	}
 	.mac {
 		margin-top: 3em;
 		background-size: 99%;
@@ -559,29 +565,79 @@ footer p{
 		padding: 3em 5.2em 0;
 		font-size: .8em;
 	}
-	.left-side {
-	    padding: 0 2em;
+	.code-number {
+		min-height: 140px;
+		width: 5%;
+		margin-left: 2.5%;
+	}
+	.code-number ul{
+		display: none;
+	}
+	.code {
+		padding: 1em .8em;
+		line-height: 1.5em;
+		min-height: 140px;
+		font-size: .82em;
+		width: 90%;
 	}
 }
 
-@media (min-width: 401px) and (max-width: 767px) {
-	.section-main .container {
-	    padding: 0;
-	}
+@media (min-width: 401px) and (max-width: 450px) {
 	.mac {
 		margin-top: 3em;
 		background-size: 99%;
 		background-position: 50% 0px;
 		height: 300px;
 		padding: 3em 5.2em 0;
-		font-size: .9em;
+		font-size: .87em;
 	}
-	.left-side {
-	    padding: 0 2em;
+	.code-number {
+		min-height: 130px;
+		width: 6%;
+		margin-left: 3%;
+	}
+	.code-number ul{
+		display: none;
+	}
+	.code {
+		padding: 1em .8em;
+		line-height: 1.5em;
+		min-height: 130px;
+		font-size: .82em;
+		width: 88%;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 800px){
+@media (min-width: 451px) and (max-width: 767px) {
+	.mac {
+	    background-size: 99%;
+	    background-position: 50% 0px;
+	    height: 300px;
+	    padding: 3em 5.2em 0;
+	    font-size: .9em;
+	    max-width: 430px;
+	    margin: 3em auto 0;
+	}
+	.square {
+		padding: 1.5em 1.5em 2.2em;
+		min-height: auto !important;
+	}
+	.code-number {
+		min-height: 130px;
+		width: 8%;
+		margin-left: 5%;
+		font-size: 11px;
+	}
+	.code {
+		padding: 1em .8em;
+		line-height: 1.5em;
+		min-height: 130px;
+		font-size: 12px;
+		width: 82%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
 	.mac {
 	    margin-top: 3em;
 	    height: 425px;
@@ -592,7 +648,37 @@ footer p{
 	.circle2{
 		display: none;
 	}
+	.code-number {
+		min-height: 160px;
+	}
+	.code {
+		min-height: 160px;
+	}
 }
+
+@media (min-width: 992px) and (max-width: 1250px){
+	.circle1 {
+		height: 55em;
+		width: 55em;
+		top: -65%;
+		left: -17%;
+	}
+	.circle2 {
+		height: 28em;
+		width: 28em;
+		top: -4%;
+		left: 55%;
+	}
+	.mac{
+		height: 260px;
+		padding: 3.3em 6.3em;
+		font-size: 11px;
+		max-width: 440px;
+		margin-top: 7em;
+	}
+}
+
+
 
 @media (max-width: 767px) {
 	h1 {
@@ -603,6 +689,12 @@ footer p{
 	}
 	h3 {
 		font-size: 1.1em;
+	}
+	.padding-xs-0{
+		padding: 0;
+	}
+	.margin-xs-0{
+		margin: 0;
 	}
 	span.icon-bar {
 		background-color: #7f7f97;
@@ -621,6 +713,14 @@ footer p{
 	.section-main {
 		background-color: #7f7f97;
 		padding: 6em 0 0em;
+	}
+	.section-main .container {
+	    padding: 0;
+	}
+	.left-side h1,
+	.left-side p,
+	.left-side a{
+		padding: 0 15px;
 	}
 	.col-xs-2.col-sm-1.padding-0.text-center {
 		display: none;
@@ -665,16 +765,6 @@ footer p{
 	}
 	.section-action h2 {
 		padding-bottom: 0.5em;
-	}
-	.code-number {
-		min-height: 165px;
-		font-size: .9em;
-	}
-	.code {
-		padding: 1em .8em;
-		line-height: 1.5em;
-		min-height: 165px;
-		font-size: .9em;
 	}
 	.max-height-65 {
 		max-height: 45px;
