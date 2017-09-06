@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Quilt</title>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-		<meta name="author" content="Quilt"> 
+		<meta name="author" content="Quilt">
 		<meta name="description" content="Quilt">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="style.css" rel="stylesheet">
@@ -199,10 +199,10 @@
 							<div class="col-xs-10 col-sm-11 code height-140">
 								<ul>
 									<li>
-										<span class="color-red">var </span><span>nodeContainer = </span><span class="color-red">new </span><span>Container(</span><span class="color-green">node:8.1</span><span>);</span>
+										<span class="color-red">const </span><span>nodeContainer = </span><span class="color-red">new </span><span>Container(</span><span class="color-green">'node:8.1'</span><span>);</span>
 									</li>
 									<li>
-										<span class="color-red">var </span><span>Mongo = </span><span class="color-red">new </span><span>Service(</span><span class="color-green">"@quilt/mongo"</span><span>, nodeContainer.replicate(</span><span class="color-blue">3</span><span>));</span>
+										<span class="color-red">const </span><span>Mongo = </span><span class="color-red">new </span><span>Service(</span><span class="color-green">'@quilt/mongo'</span><span>, nodeContainer.replicate(</span><span class="color-blue">3</span><span>));</span>
 									</li>
 								</ul>
 							</div>
@@ -219,19 +219,19 @@
 							<div class="col-xs-10 col-sm-11 code">
 								<ul>
 									<li>
-										<span class="color-red">var </span><span>HaProxy = </span><span class="color-blue">require</span><span>(</span><span class="color-green">"@quilt/haproxy"</span><span>);</span>
+										<span class="color-red">const </span><span>HaProxy = </span><span class="color-blue">require</span><span>(</span><span class="color-green">'@quilt/haproxy'</span><span>);</span>
 									</li>
 									<li>
-										<span class="color-red">var </span><span>Mongo = </span><span class="color-blue">require</span><span>(</span><span class="color-green">"@quilt/mongo"</span><span>);</span>
+										<span class="color-red">const </span><span>Mongo = </span><span class="color-blue">require</span><span>(</span><span class="color-green">'@quilt/mongo'</span><span>);</span>
 									</li>
 									<li>
 										<span></span>
 									</li>
 									<li>
-										<span class="color-red">var </span><span>mongo = </span><span class="color-red">new </span><span>Mongo(</span><span class="color-blue">2</span><span>);</span><span class="color-comment"> // Two MongoDB Replicas.</span>
+										<span class="color-red">const </span><span>mongo = </span><span class="color-red">new </span><span>Mongo(</span><span class="color-blue">2</span><span>);</span><span class="color-comment"> // Two MongoDB Replicas.</span>
 									</li>
 									<li>
-										<span class="color-red">var </span><span>haproxy = </span><span class="color-red">new </span><span>HaProxy(</span><span class="color-blue">2</span><span>, node);</span><span class="color-comment"> // Two load balancers over Node.js containers</span>
+										<span class="color-red">const </span><span>haproxy = </span><span class="color-red">new </span><span>HaProxy(</span><span class="color-blue">2</span><span>, node);</span><span class="color-comment"> // Two load balancers over Node.js containers</span>
 									</li>
 								</ul>
 							</div>
@@ -266,13 +266,13 @@
 							<div class="col-xs-10 col-sm-11 code">
 								<ul>
 									<li>
-										<span>var vm = </span><span class="color-red">new </span><span>Machine({</span>
+										<span>const vm = </span><span class="color-red">new </span><span>Machine({</span>
 									</li>
 									<li>
-										<span>&nbsp;&nbsp;&nbsp;&nbsp;provider: </span><span class="color-green">"Amazon"</span><span>, </span><span class="color-comment">// ("Google", "DigitalOcean", "Vagrant")</span>
+										<span>&nbsp;&nbsp;provider: </span><span class="color-green">'Amazon'</span><span>, </span><span class="color-comment">// ('Google', 'DigitalOcean', 'Vagrant')</span>
 									</li>
 									<li>
-										<span>&nbsp;&nbsp;&nbsp;&nbsp;size: </span><span class="color-green">"t2.micro"</span><span>,</span>
+										<span>&nbsp;&nbsp;size: </span><span class="color-green">'t2.micro'</span><span>,</span>
 									</li>
 									<li>
 										<span>});</span>
