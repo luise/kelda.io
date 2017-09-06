@@ -175,7 +175,7 @@
 					<div class="col-md-4">
 						<ul class="left-menu">
 							<a href="" class="filter" data-filter="run">
-								<li>Run, replicate, and load balance over custom containers.</li>
+								<li>Run and replicate any container.</li>
 							</a>
 							<a href="" class="filter active" data-filter="import" id="import">
 								<li>Import shared blueprints from npm.</li>
@@ -194,6 +194,7 @@
 								<ul>
 									<li>1</li>
 									<li>2</li>
+									<li>3</li>
 								</ul>
 							</div>
 							<div class="col-xs-10 col-sm-11 code height-140">
@@ -202,7 +203,10 @@
 										<span class="color-red">const </span><span>nodeContainer = </span><span class="color-red">new </span><span>Container(</span><span class="color-green">'web'</span>, <span class="color-green">'node:8.1'</span><span>);</span>
 									</li>
 									<li>
-										<span class="color-red">const </span><span>node = </span><span class="color-red">new </span><span>LoadBalancer(</span><span class="color-green">'webLB'</span><span>, nodeContainer.replicate(</span><span class="color-blue">3</span><span>));</span>
+										<span class="color-comment"> // Three Node.js containers.</span>
+									</li>
+									<li>
+										<span class="color-red">const </span><span>nodeContainers = nodeContainer.<span class="color-red">replicate</span>(</span><span class="color-blue">3</span><span>);</span>
 									</li>
 								</ul>
 							</div>
@@ -235,7 +239,7 @@
 										<span class="color-comment"> // A load balancer over Node.js containers</span>
 									</li>
 									<li>
-										<span class="color-red">const </span><span>proxy = haproxy.<span class="color-red">simpleLoadBalancer</span>(nodeContainer.replicate(<span class="color-blue">3</span>));</span>
+										<span class="color-red">const </span><span>proxy = haproxy.<span class="color-red">simpleLoadBalancer</span>(nodeContainers);</span>
 									</li>
 								</ul>
 							</div>
@@ -253,7 +257,7 @@
 										<span>proxy</span><span class="color-red">.allowFrom</span><span>(publicInternet, </span><span class="color-blue">80</span><span>);</span>
 									</li>
 									<li>
-										<span>mongo</span><span class="color-red">.allowFrom</span><span>(node, </span><span>mongo.port);</span>
+										<span>mongo</span><span class="color-red">.allowFrom</span><span>(nodeContainers, </span><span>mongo.port);</span>
 									</li>
 								</ul>
 							</div>
