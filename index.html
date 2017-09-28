@@ -195,18 +195,26 @@
 									<li>1</li>
 									<li>2</li>
 									<li>3</li>
+									<li>4</li>
+									<li>5</li>
 								</ul>
 							</div>
 							<div class="col-xs-10 col-sm-11 code height-140">
 								<ul>
 									<li>
-										<span class="color-red">const </span><span>nodeContainer = </span><span class="color-red">new </span><span>Container(</span><span class="color-green">'web'</span>, <span class="color-green">'node:8.1'</span><span>);</span>
+										<span class="color-comment"> // Create 3 containers using the node:8.1 image.</span>
+									</li>
+			<li>
+										<span class="color-red">const </span><span>nodeReplicas = [];</span>
 									</li>
 									<li>
-										<span class="color-comment"> // Three Node.js containers.</span>
+										<span class="color-red">for </span><span>(</span><span class="color-red">let </span><span>i = </span><span class="color-blue">0</span><span>; i < </span><span class="color-blue">3</span><span>; i += <span class="color-blue">1</span><span>) {</span>
 									</li>
 									<li>
-										<span class="color-red">const </span><span>nodeContainers = nodeContainer.<span class="color-red">replicate</span>(</span><span class="color-blue">3</span><span>);</span>
+										<span>&nbsp;&nbsp;nodeReplicas.push(</span><span class="color-red">new </span><span>Container(</span><span class="color-green">'web'</span>, <span class="color-green">'node:8.1'</span><span>);</span>
+									</li>
+									<li>
+										<span>}</span>
 									</li>
 								</ul>
 							</div>
