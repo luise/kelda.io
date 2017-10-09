@@ -211,7 +211,7 @@
 										<span class="color-red">for </span><span>(</span><span class="color-red">let </span><span>i = </span><span class="color-blue">0</span><span>; i < </span><span class="color-blue">3</span><span>; i += <span class="color-blue">1</span><span>) {</span>
 									</li>
 									<li>
-										<span>&nbsp;&nbsp;nodeReplicas.push(</span><span class="color-red">new </span><span>Container(</span><span class="color-green">'web'</span>, <span class="color-green">'node:8.1'</span><span>);</span>
+										<span>&nbsp;&nbsp;nodeReplicas.push(</span><span class="color-red">new </span><span>Container(</span><span class="color-green">'web'</span>, <span class="color-green">'node:8.1'</span><span>));</span>
 									</li>
 									<li>
 										<span>}</span>
@@ -247,7 +247,7 @@
 										<span class="color-comment"> // A load balancer over Node.js containers</span>
 									</li>
 									<li>
-										<span class="color-red">const </span><span>proxy = haproxy.<span class="color-red">simpleLoadBalancer</span>(nodeContainers);</span>
+										<span class="color-red">const </span><span>proxy = haproxy.<span class="color-red">simpleLoadBalancer</span>(nodeReplicas);</span>
 									</li>
 								</ul>
 							</div>
@@ -265,7 +265,7 @@
 										<span>proxy.</span><span class="color-red">allowFrom</span><span>(publicInternet, </span><span class="color-blue">80</span><span>);</span>
 									</li>
 									<li>
-										<span>mongo.</span><span class="color-red">allowFrom</span><span>(nodeContainers, </span><span>mongo.port);</span>
+										<span>mongo.</span><span class="color-red">allowFrom</span><span>(nodeReplicas, </span><span>mongo.port);</span>
 									</li>
 								</ul>
 							</div>
