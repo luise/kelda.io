@@ -48,6 +48,7 @@ h1{
 	margin-bottom: .3em;
 	letter-spacing: -0.05em;
 	font-family: 'Molengo-Regular';
+	display: inline-block;
 }
 h2{
 	font-size: 2em;
@@ -181,6 +182,12 @@ h4{
 }
 .left-side{
 	padding-right: 2em;
+}
+.beta {
+	font-size: 1em;
+	color: #fff;
+	padding-left: 0.3em;
+	font-style: italic;
 }
 .first-paragraph{
 	font-family: 'OpenSans-Semibold';
@@ -717,10 +724,12 @@ footer p{
 	.section-main .container {
 	    padding: 0;
 	}
-	.left-side h1,
 	.left-side p,
 	.left-side a{
 		padding: 0 15px;
+	}
+	.left-side h1 {
+		padding: 0 0 0 15px;
 	}
 	.col-xs-2.col-sm-1.padding-0.text-center {
 		display: none;
