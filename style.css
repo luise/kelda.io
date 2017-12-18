@@ -130,7 +130,7 @@ h4{
 .nav li img {
 	margin-left: .5em;
 }
-.nav>li>a:focus, 
+.nav>li>a:focus,
 .nav>li>a:hover {
 	background-color: transparent !important;
 	font-weight: bold;
@@ -241,7 +241,7 @@ h4{
 	margin: 0;
 }
 .square ul li {
-	padding-left: 1em; 
+	padding-left: 1em;
 	text-indent: -.7em;
 	font-size: 1em;
 	line-height: 1.3em;
@@ -266,7 +266,7 @@ h4{
 	padding-bottom: 1.4em;
 }
 .left-menu li{
-	padding: .9em 1em .8em;	
+	padding: .9em 1em .8em;
 }
 .left-menu a:hover,
 .left-menu a:focus,
@@ -387,7 +387,7 @@ h4{
 
 footer{
 	background-color: #43424d;
-	padding: 2em 0 1.5em;	
+	padding: 2em 0 1.5em;
 }
 footer p{
 	color: #d1d1d1;
@@ -400,7 +400,7 @@ footer p{
 .one{
 	white-space: nowrap;
 	overflow: hidden;
-	width: 30em;	 
+	width: 30em;
 }
 .one{
 	animation: appear .8s steps(500, end);
@@ -438,19 +438,19 @@ footer p{
 @keyframes appear{
 	from { opacity: 0; }
 	  to { opacity: 1; }
-} 
+}
 
 @-webkit-keyframes type2{
 	0%{width: 0;}
 	50%{width: 0;}
 	100%{ width: 100; }
-} 
+}
 
 @keyframes type2{
 	0%{width: 0;}
 	50%{width: 0;}
 	100%{ width: 100; }
-} 
+}
 
 @keyframes blink{
 	50% { border-color: white;}
