@@ -462,7 +462,8 @@ footer p{
 /* SECTION - WE'RE HIRING  */
 
 .section-hiring{
-	padding: 6em 0 5em;
+	padding-top: 6em;
+	min-height: 90vh;
 }
 .paragraph{
 	margin: 9em 1em 0;
@@ -481,10 +482,6 @@ footer p{
 }
 
 /*  SECTION - GITHUB  */
-
-.section-jobs-github{
-	padding: 4em 0 3em;
-}
 
 .square-jobs .contact{
 	padding: 1em 0 2em;
@@ -840,11 +837,5 @@ footer p{
 	.section-hiring,
 	.section-team {
 		padding: 5em 0 3em;
-	}
-	.section-jobs-github {
-		padding: 3em 0 2em;
-	}
-	.section-jobs-github img {
-		height: 65px;
 	}
 }
