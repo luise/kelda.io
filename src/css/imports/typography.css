@@ -1,0 +1,45 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+*::selection {
+  background: $blue;
+}
+
+h1 {
+  font-family: $avenir;
+  font-weight: $bold;
+  font-size: $medium;
+  line-height: 48px;
+  letter-spacing: -1px;
+  margin: -18px 0 -28px 0;
+}
+
+h2 {
+  font-size: $small;
+  font-weight: $regular;
+  line-height: $medium;
+  margin: -5px 0 3px 0;
+
+  &.section-label {
+    border-bottom: 1px solid $grey;
+  }
+}
+
+h3 {
+  font-size: $tiny;
+  font-weight: $bold;
+  line-height: 20px;
+  margin: -5px 0 3px 0;
+
+  &.section-label {
+    border-bottom: 1px solid $grey;
+  }
+}
+
+p {
+  font-size: 18px;
+  color: $lightGrey;
+  line-height: 26px;
+  margin: -7px 0;
+}

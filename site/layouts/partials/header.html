@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="{{ $.Site.BaseURL }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#33a4e4">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Kelda">
+    <meta name="application-name" content="Kelda">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/css/global.css"/>
+
+    {{ if isset .Params "styleoverrides" }}
+      <link rel="stylesheet" href='/css{{ .Params.styleoverrides }}'/>
+    {{ else }}
+      <link rel="stylesheet" href='/css/landing.css'/>
+      <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/prismjs@1.11.0/themes/prism-okaidia.css'/>
+    {{ end }}
+
+  </head>
+  <body class="{{ if .Title }}{{ .Title | urlize }}{{ else }}landing{{ end }}">
+    <header class='{{ if ne .Title "team" }}dark{{ end }}'>
+      <nav class="clearfix">
+        {{ range .nav }}
+          <a href='{{ .linksto }}' class='{{ if eq .type "logo" }}logo{{ else if eq .type "text"}}nav-link{{ else if eq .type "cta" }}btn-primary{{ end }} {{ .label | urlize }}
+          '>{{ .label }}</a>
+        {{ end }}
+      </nav>
+    </header>

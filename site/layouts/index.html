@@ -1,0 +1,21 @@
+{{ partial "header" .Site.Data.global }}
+
+<section class="hero dark">
+  <div class="container">
+    <div class="row">
+      <div class="hero-copy">
+        <h1>{{ .Site.Data.landing.hero.headline | markdownify }}</h1>
+        <h2>{{ .Site.Data.landing.hero.subhead | markdownify }}</h2>
+        <div class="npm-copy">
+          <code id="npm-code" class="btn-code" value="{{ .Site.Data.landing.hero.npmcode }}">{{ .Site.Data.landing.hero.npmcode }}</code>
+          <button class="btn-primary btn-copy" data-clipboard-target="#npm-code"><i class="copy"></i>Copy</button>
+          <p class="subtext">{{ .Site.Data.landing.hero.btnsubtext | markdownify }}</p>
+        </div>
+      </div>
+    <div class="top-code" id="top-code">
+      <div class="raw-code" id="raw-code">{{ .Site.Data.landing.hero.examplecode | markdownify }}</div>
+    </div>
+    <div class="animated-code" id="animated-code"></div>
+  </div>
+</section>
+{{ partial "footer" .Site.Data.global }}

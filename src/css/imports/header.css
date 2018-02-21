@@ -1,0 +1,36 @@
+header {
+  padding: $small;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  + * {
+    padding-top: 105px;
+  }
+
+  nav {
+    text-align: right;
+  }
+
+  .logo {
+    background: url(/img/logo-dark.svg) no-repeat 0 0;
+    background-size: contain;
+    height: 57px;
+    width: 164px;
+    color: transparent;
+    font-size: 0;
+    float: left;
+    vertical-align: middle;
+  }
+
+  .nav-link {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    height: 57px;
+    margin-right: $small;
+    font-weight: $semibold;
+  }
+}

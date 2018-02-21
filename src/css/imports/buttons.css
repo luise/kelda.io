@@ -1,0 +1,139 @@
+*[class*="btn"] {
+  border-radius: $smallBorderRadius;
+  font-size: 16px;
+  font-weight: $bold;
+  line-height: 18px;
+  text-decoration: none;
+  padding: 14px $small;
+  display: inline-block;
+  transition: transform .5s ease;
+
+  &[class*="smallest"] {
+    font-size: 10px;
+    font-weight: $bold;
+    border-radius: $smallBorderRadius;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform .5s ease;
+    padding: 5px $micro 3px $micro;
+    line-height: $micro;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+  outline: none;
+  font-weight: $regular;
+  text-decoration: none;
+
+  &:visited,
+  &:active,
+  &:focus {
+    color: inherit;
+  }
+}
+
+.btn-primary {
+  background: $purple;
+  background-image: linear-gradient(0deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.18) 100%);
+  border: none;
+  border-radius: $smallBorderRadius;
+  box-shadow: 0 2px 4px 0 rgba(46,14,75,0.10);
+  color: white;
+
+  &:visited,
+  &:active,
+  &:focus {
+    border: none;
+    color: white;
+  }
+}
+
+.btn-secondary {
+/*  background: $lightGrey;
+  background: linear-gradient(0deg, $lighterGrey 0%, $lightGrey 100%);*/
+
+  &.smallest {
+  }
+}
+
+.btn-tertiary {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: $tiny;
+  font-weight: $bold;
+  text-transform: uppercase;
+  /*color: $navy;*/
+  padding: $micro;
+  transition: color .2s ease;
+
+  &.is-checked {
+    /*color: $darkBlue;*/
+  }
+
+  &:hover {
+    color: $grey;
+  }
+}
+
+.btn-code {
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.06) 100%);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-sizing: border-box;
+  color: white;
+  padding: 13px $tiny;
+}
+
+.btn-urgent {
+  background: $grey;
+  /*background-image: linear-gradient(0deg, $grey 4%, $lighterGrey 96%);*/
+  border-radius: $smallBorderRadius;
+  font-weight: $bold;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+  &.smallest {
+    /*background-image: linear-gradient(0deg, $lightGrey 0%, $grey 100%);*/
+  }
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-urgent {
+  background-size: 1px 200%;
+  color: white;
+  transition: background .2s ease;
+
+  &:hover {
+    background-position: 100%;
+  }
+}
+
+.subtext {
+  font-size: 14px;
+  color: $lighterGrey;
+  margin: 6px 0 -9px 0;
+}
+
+.arrow-text-link {
+  font-size: 12px;
+  font-weight: $semibold;
+  color: $lightGrey;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dark {
+  .btn-primary {
+    color: $lightGrey;
+    font-weight: $black;
+    background: linear-gradient(135deg, #77ddff 0%,#c973e9 100%);
+
+    &:visited,
+    &:active,
+    &:focus {
+      color: $lightGrey;
+    }
+  }
+}

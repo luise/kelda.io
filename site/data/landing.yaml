@@ -1,0 +1,42 @@
+---
+hero:
+  headline: "Soar through your <em class='tooltip' title='Containers are a combination of several kernel features including SELinux, Linux namespaces, and control groups, providing isolation of end user processes, networking, and filesystem space.'>Containerized Application</em> configurations with Kelda."
+  subhead: "Simply describe with Javascript and deploy from the command line."
+  npmcode: "npm install -g @install/kelda"
+  btnsubtext: "Got questions? [Take a tour of Kelda →](http://docs.kelda.io/#quick-start)"
+  examplecode: |
+    ```js
+      // Boot virtual machines in seconds
+      const vm = new Machine({
+        provider: 'Amazon',
+        region: 'us-west-1'
+      });
+    ```
+
+    ```js
+      // Share and reuse configurations
+      const { Redis } = require('@kelda/redis');
+      const redis = new Redis(3, 'AUTH_PASSWORD');
+      // Create a Redis cluster with 3 workers.
+    ```
+
+    ```js
+      // Run a variety of containers
+      const app = new Container(
+        'appName',
+        'anyDockerImage'
+      );
+    ```
+
+    ```js
+      // Set up your secure network
+      allowTraffic(publicInternet, app, 80);
+    ```
+
+    ```js
+      // Keep sensitive information secure
+      app.env = {
+        GITHUB_OAUTH_TOKEN: new
+        Secret('githubToken'),}
+    ```
+---

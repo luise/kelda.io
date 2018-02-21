@@ -1,0 +1,112 @@
+.centered-text {
+  text-align: center;
+}
+
+.container {
+  flex-container: fluid;
+  max-width: $desktop;
+}
+
+.row {
+  flex-row: auto;
+}
+
+.half,
+.third,
+.quarter {
+  padding-bottom: $small;
+  flex-column: 12;
+
+  @media screen and (min-width: $mobile) {
+    flex-column: 6;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 0;
+  }
+
+  &:nth-child(even) {
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.third {
+  @media screen and (min-width: $mobile) {
+    flex-column: 12;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-column: 4;
+  }
+}
+
+.quarter {
+  @media screen and (min-width: $tablet) {
+    flex-column: 3;
+  }
+}
+
+.fixed {
+  position: fixed;
+}
+
+.clearfix {
+  &:after {
+    content: ' ';
+    width: 100%;
+    display: table;
+  }
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.full-width {
+  margin: 0 -$small;
+  padding: 0 $small;
+}
+
+.section-intro {
+  border-bottom: 1px solid $blue;
+  margin-bottom: $medium;
+
+  .section-label {
+    display: inline-block;
+    margin: -3px 0 -1px 0;
+    padding-bottom: 21px;
+  }
+
+  .arrow-text-link {
+    background: url(/img/global/right-caret.svg) right 5px no-repeat;
+    color: $lightGrey;
+    float: right;
+    padding: 3px 10px 0 $micro;
+    transition: padding-right .1s linear;
+    vertical-align: baseline;
+
+    &:hover {
+      padding-right: 14px;
+    }
+  }
+}
+
+i {
+  content: '';
+  display: inline-block;
+  height: $tiny;
+  width: $tiny;
+  vertical-align: middle;
+  margin-right: $micro;
+
+  &.copy {
+    background: url(/img/clipboard.svg) no-repeat center;
+  }
+}

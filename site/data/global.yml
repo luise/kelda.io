@@ -1,0 +1,18 @@
+---
+nav:
+  - label: "Kelda"
+    type: "logo"
+    linkto: "/"
+  - label: "Docs"
+    type: "text"
+    linkto: "http://docs.kelda.io/"
+  - label: "GitHub"
+    type: "text"
+    linkto: "https://github.com/kelda/kelda"
+  - label: "Team"
+    type: "text"
+    linkto: "/team"
+  - label: "Get in touch"
+    type: "cta"
+    linkto: "/contact"
+---
