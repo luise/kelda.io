@@ -26,11 +26,11 @@
 
   </head>
   <body class="{{ if .Title }}{{ .Title | urlize }}{{ else }}landing{{ end }}">
-    <header class='{{ if ne .Title "team" }}dark{{ end }}'>
+    <header id="header" class='{{ if ne .Title "team" }}dark{{ end }}'>
       <nav class="clearfix">
         {{ range .nav }}
           <a href='{{ .linksto }}' class='{{ if eq .type "logo" }}logo{{ else if eq .type "text"}}nav-link{{ else if eq .type "cta" }}btn-primary{{ end }} {{ .label | urlize }}
-          '>{{ .label }}</a>
+          '>{{ if eq .type "logo" }}<img class="logo-dark" src="/img/logo-dark.svg" alt="Kelda"/><img class="logo-light" src="/img/logo-light.svg" alt="Kelda"/>{{ end }}{{ .label }}</a>
         {{ end }}
       </nav>
     </header>

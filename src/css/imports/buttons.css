@@ -124,11 +124,12 @@ button {
   text-transform: uppercase;
 }
 
-.dark {
+.dark:not(.light) {
   .btn-primary {
     color: $lightGrey;
     font-weight: $black;
     background: linear-gradient(135deg, #77ddff 0%,#c973e9 100%);
+    transition: background .2s linear, color .2s linear;
 
     &:visited,
     &:active,

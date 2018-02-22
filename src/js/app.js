@@ -28,9 +28,9 @@ function atTop() {
 
 function brightenHeader() {
   if (atTop()) {
-    $('#header').addClass('light');
-  } else {
     $('#header').removeClass('light');
+  } else {
+    $('#header').addClass('light');
   }
 }
 

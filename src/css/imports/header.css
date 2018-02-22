@@ -1,11 +1,14 @@
-header {
+#header {
+  background: white;
+  box-shadow: 0 0 $tiny rgba(0,0,0,0.1);
   padding: $small;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  z-index: 100;
+  transition: background .2s linear;
+  z-index: 10000;
 
   + * {
     padding-top: 105px;
@@ -15,23 +18,55 @@ header {
     text-align: right;
   }
 
+  &.dark:not(.light) {
+    background: transparent;
+
+    .logo-dark {
+      opacity: 1;
+    }
+
+    .logo-light {
+      opacity: 0;
+    }
+
+    .nav-link {
+      color: white;
+    }
+  }
+
   .logo {
-    background: url(/img/logo-dark.svg) no-repeat 0 0;
-    background-size: contain;
     height: 57px;
     width: 164px;
     color: transparent;
     font-size: 0;
     float: left;
+    position: relative;
     vertical-align: middle;
   }
 
+  .logo-dark,
+  .logo-light {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: opacity .2s linear;
+  }
+
+  .logo-dark {
+    opacity: 0;
+  }
+
+  .logo-light {
+    opacity: 1;
+  }
+
   .nav-link {
-    color: white;
+    color: $grey;
     display: inline-flex;
     align-items: center;
     height: 57px;
     margin-right: $small;
     font-weight: $semibold;
+    transition: color .2s linear;
   }
 }
