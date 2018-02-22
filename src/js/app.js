@@ -13,4 +13,27 @@ setTimeout(function(){
     contentType: 'html',
     showCursor: false
   });
-}, 1000);
+}, 100);
+
+new Sticky('.sticky');
+
+// turn sticky header white on scroll
+function atTop() {
+  if ($(window).scrollTop() === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function brightenHeader() {
+  if (atTop()) {
+    $('#header').addClass('light');
+  } else {
+    $('#header').removeClass('light');
+  }
+}
+
+brightenHeader();
+
+$(window).on('scroll', brightenHeader);

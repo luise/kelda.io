@@ -4,6 +4,8 @@
   .hero {
     background: url(/img/hero-bg.jpg) no-repeat bottom center;
     background-size: cover;
+    position: relative;
+    z-index: 2;
 
     .container {
       padding-top: $xl;
@@ -19,21 +21,26 @@
       color: white;
     }
 
-    h1 .tooltip {
-      background: url(/img/info-circle.svg) no-repeat top right;
-      font-style: normal;
-      position: relative;
-      padding-right: $tiny;
-      cursor: pointer;
+    h1 {
+      font-size: $medium;
+      line-height: 48px;
 
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 6px;
-        left: 0;
-        width: calc(100% - $tiny);
-        height: 2px;
-        background: $blue;
+      .tooltip {
+        background: url(/img/info-circle.svg) no-repeat top right;
+        font-style: normal;
+        position: relative;
+        padding-right: $tiny;
+        cursor: pointer;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 6px;
+          left: 0;
+          width: calc(100% - $tiny);
+          height: 2px;
+          background: $blue;
+        }
       }
     }
 
@@ -43,7 +50,7 @@
     }
 
     code {
-      margin-top: 49px;
+      margin-top: 73px;
       margin-right: -10px;
       padding-right: $large;
     }
@@ -70,10 +77,90 @@
     transition: height .2s linear;
 
     pre {
+      font-size: 12px;
       background: none;
       padding: 0;
-      margin: 0 0 $small 0;
+      margin: 0 0 $tiny 0;
       transition: height .2s linear;
+    }
+  }
+
+  .what-is-kelda {
+    background: white;
+    overflow: hidden;
+    padding: $xl 0;
+
+    .diagram {
+      flex-column: 6;
+      position: relative;
+
+      img {
+        max-width: 362px;
+        padding-left: $medium;
+      }
+
+      .gradient {
+        position: fixed;
+        width: 100%;
+        height: 300px;
+        bottom: 0;
+        margin-left: 20px;
+        background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+      }
+
+      .layer {
+        background: $lightestGrey;
+        display: flex;
+        font-weight: $semibold;
+        font-size: 14px;
+        align-items: center;
+        position: absolute;
+        left: 20px;
+        width: 4px;
+        white-space: nowrap;
+
+        &.apis {
+          height: 40%;
+
+          span {
+            transform: rotate3d(0, 0, 1, -90deg) translate3d(0, -46px, 0);
+          }
+        }
+
+        &.kelda {
+          background: $orange;
+          background: linear-gradient($lightOrange 0%, $pink 100%);
+          height: 26%;
+          top: calc(40% + 2px);
+
+          span {
+            color: $orange;
+            transform: rotate3d(0, 0, 1, -90deg) translate3d(0, -31px, 0);
+          }
+        }
+
+        &.cloud {
+          height: 31%;
+          top: calc(66% + 4px);
+
+          span {
+            transform: rotate3d(0, 0, 1, -90deg) translate3d(0, -63px, 0);
+          }
+        }
+      }
+    }
+
+    .kelda-info {
+      flex-column: 6;
+    }
+
+    h2 {
+      margin-top: 52px;
+      margin-bottom: 44px;
+    }
+
+    p {
+      margin-bottom: $small;
     }
   }
 }

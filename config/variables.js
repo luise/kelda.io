@@ -4,12 +4,13 @@ module.exports = {
 
   // colors
   // offWhite: '#fbfbfb',
-  // lightestGrey: '#E6E6E6',
+  lightestGrey: '#E6E6E6',
   lighterGrey: '#9B9B9B',
   lightGrey: '#2B2B2D',
   grey: '#383845',
-  // lightOrange: '#ffa27b',
-  orange: '#FFA054',
+  lightOrange: '#FFA054',
+  orange: '#F6705D',
+  pink: '#ED4264',
   // lightBlue: '#F5F8FC',
   // lighterBlue: '#59befb',
   blue: '#8AC4FA',

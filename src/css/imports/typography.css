@@ -9,8 +9,8 @@ html {
 h1 {
   font-family: $avenir;
   font-weight: $bold;
-  font-size: $medium;
-  line-height: 48px;
+  font-size: $large;
+  line-height: 88px;
   letter-spacing: -1px;
   margin: -18px 0 -28px 0;
 }
@@ -19,7 +19,7 @@ h2 {
   font-size: $small;
   font-weight: $regular;
   line-height: $medium;
-  margin: -5px 0 3px 0;
+  margin: -5px 0 -21px 0;
 
   &.section-label {
     border-bottom: 1px solid $grey;

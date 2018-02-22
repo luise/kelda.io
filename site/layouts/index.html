@@ -18,4 +18,25 @@
     <div class="animated-code" id="animated-code"></div>
   </div>
 </section>
+
+<section class="what-is-kelda">
+  <div class="container">
+    <div class="row">
+      <div class="diagram">
+        <div class="layer apis"><span>Apps/APIs</span></div>
+        <div class="layer kelda"><span>Kelda</span></div>
+        <div class="layer cloud"><span>Deploy to Cloud</span></div>
+        <div class="gradient"></div>
+        <img src="/img/diagram.png"/>
+      </div>
+      <div class="kelda-info" data-sticky-container>
+        <div class="sticky" data-margin-top="116px">
+          <h1>{{ .Site.Data.landing.whatiskelda.headline | markdownify }}</h1>
+          <h2>{{ .Site.Data.landing.whatiskelda.subhead | markdownify }}</h2>
+          {{ .Site.Data.landing.whatiskelda.copy | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {{ partial "footer" .Site.Data.global }}

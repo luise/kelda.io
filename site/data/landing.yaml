@@ -37,6 +37,14 @@ hero:
       // Keep sensitive information secure
       app.env = {
         GITHUB_OAUTH_TOKEN: new
-        Secret('githubToken'),}
+        Secret('githubToken'),
+      }
     ```
+whatiskelda:
+  headline: What is Kelda?
+  subhead: Kelda is a simple way to configure, run, and manage containerized applications in the cloud.
+  copy: |
+    Kelda’s intuitive, high-level JavaScript API makes it easy to describe the systems you want to run in the cloud — that is, the virtual machines, containers, network policies, and more.
+
+    Just pass this high-level view to Kelda’s deployment platform using the `kelda` CLI, and we take care of the nitty gritty details needed to get your system up and running in your cloud of choice.
 ---
