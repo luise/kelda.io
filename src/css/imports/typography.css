@@ -38,8 +38,7 @@ h3 {
 }
 
 p {
-  font-size: 18px;
-  color: $lightGrey;
-  line-height: 26px;
+  font-size: $tiny;
+  line-height: $small;
   margin: -7px 0;
 }

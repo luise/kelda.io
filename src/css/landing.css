@@ -11,79 +11,80 @@
       padding-top: $xl;
       padding-bottom: $xxl;
     }
-  }
 
-  .hero-copy {
-    flex-column: 7;
+    .hero-copy {
+      flex-column: 7;
 
-    h1,
-    h2 {
-      color: white;
-    }
+      h1,
+      h2 {
+        color: white;
+      }
 
-    h1 {
-      font-size: $medium;
-      line-height: 48px;
+      h1 {
+        font-size: $medium;
+        line-height: 48px;
 
-      .tooltip {
-        background: url(/img/info-circle.svg) no-repeat top right;
-        font-style: normal;
-        position: relative;
-        padding-right: $tiny;
-        cursor: pointer;
+        .tooltip {
+          background: url(/img/info-circle.svg) no-repeat top right;
+          font-style: normal;
+          position: relative;
+          padding-right: $tiny;
+          cursor: pointer;
 
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 6px;
-          left: 0;
-          width: calc(100% - $tiny);
-          height: 2px;
-          background: $blue;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: calc(100% - $tiny);
+            height: 2px;
+            background: $blue;
+          }
+        }
+      }
+
+      h2 {
+        padding-top: $large;
+        max-width: 500px;
+      }
+
+      code {
+        margin-top: 73px;
+        margin-right: -10px;
+        padding-right: $large;
+      }
+
+      .subtext {
+        text-align: right;
+        font-style: italic;
+        max-width: 462px;
+
+        a {
+          color: $blue;
+          font-weight: $bold;
         }
       }
     }
 
-    h2 {
-      padding-top: $large;
-      max-width: 500px;
+    .top-code {
+      display: none;
     }
 
-    code {
-      margin-top: 73px;
-      margin-right: -10px;
-      padding-right: $large;
-    }
+    .animated-code {
+      flex-column: 5;
+      margin-top: 2px;
+      transition: height .2s linear;
 
-    .subtext {
-      text-align: right;
-      font-style: italic;
-      max-width: 462px;
-
-      a {
-        color: $blue;
-        font-weight: $bold;
+      pre {
+        font-size: 12px;
+        background: none;
+        padding: 0;
+        margin: 0 0 $tiny 0;
+        transition: height .2s linear;
       }
     }
   }
 
-  .top-code {
-    display: none;
-  }
-
-  .animated-code {
-    flex-column: 5;
-    margin-top: 2px;
-    transition: height .2s linear;
-
-    pre {
-      font-size: 12px;
-      background: none;
-      padding: 0;
-      margin: 0 0 $tiny 0;
-      transition: height .2s linear;
-    }
-  }
 
   .what-is-kelda {
     background: white;
@@ -168,6 +169,37 @@
 
     p {
       margin-bottom: $small;
+    }
+  }
+
+  .why-kelda {
+    background: white;
+    padding: 0 0 $xl 0;
+    position: relative;
+    z-index: 3;
+
+    h1 {
+      margin-bottom: 31px;
+    }
+
+    .section-number {
+      font-family: $avenir;
+      font-weight: $bold;
+      font-size: 54px;
+      color: $lightestGrey;
+      letter-spacing: -2px;
+      margin-bottom: 9px;
+
+      img {
+        margin-right: $tiny;
+      }
+    }
+
+    .third {
+      strong {
+        display: block;
+        margin-bottom: 20px;
+      }
     }
   }
 }

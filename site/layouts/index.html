@@ -39,4 +39,23 @@
     </div>
   </div>
 </section>
+
+<section class="why-kelda">
+  <div class="container">
+    <div class="row">
+      <h1>{{ .Site.Data.landing.whatiskelda.headline | markdownify }}</h1>
+    </div>
+    <div class="row">
+      {{ range .Site.Data.landing.whykelda }}
+        <article class="third">
+          <div class="section-number">
+            <img src="/img/why-kelda-{{ .numberid }}.svg"/>{{ .numberid }}
+          </div>
+          <strong>{{ .headline | markdownify }}</strong>
+          <p>{{ .copy | markdownify }}</p>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ partial "footer" .Site.Data.global }}
