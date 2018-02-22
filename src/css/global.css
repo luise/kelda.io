@@ -9,6 +9,12 @@
 @import "imports/header.css";
 
 body {
+  color: $grey;
   font-size: $tiny;
   font-family: $roboto;
+}
+
+
+code .toolbar-item {
+  font-size: $tiny;
 }

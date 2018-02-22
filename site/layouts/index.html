@@ -43,10 +43,10 @@
 <section class="why-kelda">
   <div class="container">
     <div class="row">
-      <h1>{{ .Site.Data.landing.whatiskelda.headline | markdownify }}</h1>
+      <h1>{{ .Site.Data.landing.whykelda.headline | markdownify }}</h1>
     </div>
     <div class="row">
-      {{ range .Site.Data.landing.whykelda }}
+      {{ range .Site.Data.landing.whykelda.triptych }}
         <article class="third">
           <div class="section-number">
             <img src="/img/why-kelda-{{ .numberid }}.svg"/>{{ .numberid }}
@@ -55,6 +55,39 @@
           <p>{{ .copy | markdownify }}</p>
         </article>
       {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="simplify-code">
+  <div class="container">
+    <div class="row">
+      <h1>{{ .Site.Data.landing.simplifycode.headline | markdownify }}</h1>
+      <h2>{{ .Site.Data.landing.simplifycode.subhead | markdownify }}</h2>
+    </div>
+  </div>
+  <div class="container code-comparison">
+    <div class="row">
+      <div class="left half">
+        <div class="label clearfix">
+          <img src="{{ .Site.Data.landing.simplifycode.code.before.imagepath }}"/>
+          <p>
+            <strong>{{ .Site.Data.landing.simplifycode.code.before.label }}</strong>
+            <em>{{ .Site.Data.landing.simplifycode.code.before.filename }}</em>
+          </p>
+        </div>
+        {{ .Site.Data.landing.simplifycode.code.before.snippet | markdownify }}
+      </div>
+      <div class="right half">
+        <div class="label clearfix">
+          <img src="{{ .Site.Data.landing.simplifycode.code.withkelda.imagepath }}"/>
+          <p>
+            <strong>{{ .Site.Data.landing.simplifycode.code.withkelda.label }}</strong>
+            <em>{{ .Site.Data.landing.simplifycode.code.withkelda.filename }}</em>
+          </p>
+        </div>
+        {{ .Site.Data.landing.simplifycode.code.withkelda.snippet | markdownify }}
+      </div>
     </div>
   </div>
 </section>
