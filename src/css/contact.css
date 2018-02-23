@@ -1,0 +1,78 @@
+.contact {
+  background: $lightGrey;
+
+  #header {
+    .nav-link.team {
+      margin-right: 0;
+    }
+
+    .get-in-touch {
+      display: none;
+    }
+  }
+
+  .hero {
+    background: url(/img/hero-bg.jpg) no-repeat bottom center;
+    background-size: cover;
+    padding-bottom: $xl;
+    position: relative;
+    z-index: 3;
+
+    .container:first-child {
+      padding: $large 0;
+    }
+
+    h1 {
+      color: white;
+      font-size: $medium;
+      line-height: 48px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .small-fields {
+      flex-column: 4;
+    }
+
+    .large-fields {
+      flex-column: 8;
+    }
+
+    input,
+    textarea,
+    input::placeholder,
+    textarea::placeholder {
+      color: white;
+    }
+
+    input,
+    textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid $lighterGrey;
+      border-radius: $smallBorderRadius;
+      box-sizing: border-box;
+    }
+
+    input,
+    textarea,
+    .btn-primary {
+      padding: 14px $tiny;
+      width: 100%;
+      text-align: left;
+      margin-bottom: $tiny;
+    }
+
+    textarea {
+      min-height: 240px;
+    }
+
+    .btn-primary {
+      margin-top: -3px;
+
+      &:after {
+        content: '→';
+        float: right;
+      }
+    }
+  }
+}

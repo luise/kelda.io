@@ -1,0 +1,28 @@
+{{ partial "header" . }}
+
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <h1>{{ .Site.Data.contact.headline | markdownify }}</h1>
+    </div>
+  </div>
+  <div class="container">
+    <form class="dark row" method="POST" action="https://formspree.io/luise@kelda.io">
+      <div class="small-fields">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="company" placeholder="Company">
+        <input type="email" name="_replyto" placeholder="Email">
+        <input type="tel" name="phone" placeholder="Phone">
+        <input type="hidden" name="_subject" value="New Site Submission" />
+        <input type="hidden" name="_next" value="https://kelda.io/thanks" />
+        <input type="text" name="_gotcha" style="display:none" />
+      </div>
+      <div class="large-fields">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit" class="btn-primary">{{ .Site.Data.contact.submitcopy | markdownify }}</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{{ partial "footer" .Site.Data.global.footer }}
