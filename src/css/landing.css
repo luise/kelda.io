@@ -278,7 +278,7 @@
 
   .tour {
     background: white;
-    padding: $medium 0 $xl 0;
+    padding: $medium 0;
     position: relative;
     z-index: 3;
 
@@ -371,6 +371,45 @@
       .text-link {
         display: block;
         padding: 14px $small;
+      }
+    }
+  }
+
+  .bottom-cta {
+    background: white;
+    padding: 0 0 $xl 0;
+    position: relative;
+    z-index: 3;
+
+    h1 {
+      margin-bottom: $medium;
+    }
+
+    h2 {
+      max-width: 600px;
+    }
+
+    .copy {
+      flex-column: 8;
+    }
+
+    .actions {
+      flex-column: 4;
+
+      .btn-icon {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        &:hover img {
+          transform: translate3d(-4px,0,0);
+        }
+
+        img {
+          margin-bottom: -12px;
+          transition: transform .2s ease;
+        }
       }
     }
   }

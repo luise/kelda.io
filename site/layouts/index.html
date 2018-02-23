@@ -123,4 +123,23 @@
   </div>
 </section>
 
+<section class="bottom-cta">
+  <div class="container">
+    <div class="row">
+      <div class="copy">
+        <h1>{{ .Site.Data.landing.bottomcta.headline | markdownify }}</h1>
+        <h2>{{ .Site.Data.landing.bottomcta.subhead | markdownify }}</h2>
+      </div>
+      <div class="actions">
+        {{ range .Site.Data.landing.bottomcta.actions }}
+          {{ if eq .id "email-drip" }}
+            <div href="{{ .linksto }}" class="btn-icon {{ .id }}"><img src="{{ .imagepath }}"/><!-- <input></input> -->{{ .slug }}</div>
+          {{ else }}
+            <a href="{{ .linksto }}" class="btn-icon {{ .id }}"><img src="{{ .imagepath }}"/>{{ .slug }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
 {{ partial "footer" .Site.Data.global }}

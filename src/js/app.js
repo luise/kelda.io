@@ -22,6 +22,12 @@ setTimeout(function(){
 new Sticky('.sticky');
 
 // code carousel
+function updateSliderHeight(h) {
+  $('.slider').animate({
+    height: h
+  }, 100);
+}
+
 function setActiveSlider(s) {
   if (s) {
     var slideIndex = s + 1;
@@ -31,6 +37,7 @@ function setActiveSlider(s) {
 
   $('.slider > div > div:nth-child(' + slideIndex + ')').addClass('active');
   $('.btn-tour:nth-child(' + slideIndex + ')').addClass('active');
+  updateSliderHeight($('.slider > div > div:nth-child(' + slideIndex + ')').height());
 }
 
 function resetActiveSlider() {

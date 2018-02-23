@@ -164,4 +164,20 @@ tour:
   cta:
     copy: Get started now →
     linksto: "/contact"
+
+bottomcta:
+  headline: Stay in Touch.
+  subhead: Occasionally get news about Kelda. We’d also love to hear from you. Ask us questions, give us feedback or just say ‘Hi’.
+  actions:
+    - id: email-drip
+      slug: Get on our mailing list
+      imagepath: "/img/mail-icon.png"
+    - id: slack
+      slug: Chat with us on Slack
+      linksto: "https://kelda-inc.slack.com"
+      imagepath: "/img/slack-icon.png"
+    - id: github
+      slug: Contribute on GitHub
+      linksto: "https://github.com/kelda/kelda"
+      imagepath: "/img/github-icon.png"
 ---
