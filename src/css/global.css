@@ -15,6 +15,18 @@ body {
 }
 
 
-code .toolbar-item {
-  font-size: $tiny;
+.toolbar-item a {
+  font-size: 14px !important;
+  padding: 4px $micro 3px $micro !important;
+  border-radius: 99px !important;
+}
+
+.light-code .toolbar-item a {
+  background: $purple !important;
+  color: white !important;
+  box-shadow: none !important;
+
+  &:hover {
+    opacity: 0.9 !important;
+  }
 }

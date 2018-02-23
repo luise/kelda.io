@@ -110,18 +110,37 @@ button {
   }
 }
 
+.btn-tour {
+  background: $lightestGrey;
+  background-image: linear-gradient(#dadada 0%, $lightestGrey 100%);
+  border-radius: $smallBorderRadius;
+  border: none;
+  color: $lightGrey;
+  text-shadow: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+
+  span {
+    float: right;
+  }
+
+  &.active {
+    background: $grey;
+    background-image: linear-gradient(#62626C 0%, #383845 100%);
+    color: white;
+  }
+}
+
 .subtext {
   font-size: 14px;
   color: $lighterGrey;
   margin: 6px 0 -9px 0;
 }
 
-.arrow-text-link {
-  font-size: 12px;
-  font-weight: $semibold;
-  color: $lightGrey;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.text-link {
+  font-weight: $bold;
+  color: $purple;
 }
 
 .dark:not(.light) {
@@ -137,4 +156,23 @@ button {
       color: $lightGrey;
     }
   }
+}
+
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation: pulse .5s both;
 }

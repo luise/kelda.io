@@ -71,7 +71,7 @@ simplifycode:
       label: Before
       filename: deployment.yaml
       snippet: |
-        ```yaml{.line-numbers}
+        ```yaml.line-numbers
           apiVersion: apps/v1beta1
           kind: Deployment
           metadata:
@@ -95,7 +95,7 @@ simplifycode:
       label: With Kelda
       filename: deployment.js
       snippet: |
-        ```js{.line-numbers}
+        ```js.line-numbers
           const nginx = new Container('nginx', 'nginx:1.7.9');
           allowTraffic(publicInternet, nginx, 80);
 
@@ -114,4 +114,54 @@ simplifycode:
 
 
         ```
+
+tour:
+  headline: Deploy & Manage Easily.
+  subhead: With Kelda, it is not just easy to get started. It is easy to keep going. Oh, and Kelda isn’t all-or-nothing — we run great alongside any existing services you might have.
+  steps:
+    - numberid: "01"
+      title: Install
+      headline: Install Kelda
+      code: |
+        ```markup.line-numbers
+          $ npm install -g @kelda/install
+        ```
+    - numberid: "02"
+      title: Describe in JS
+      headline: Describe your deployment in a JavaScript blueprint
+      code: |
+        ```js.line-numbers
+          const { Machine, Infrastructure } = require('kelda');
+          const { Spark } = require('@kelda/spark');
+
+          const sparkWorkerCount = 4;
+
+          const vm = new Machine({ provider: 'Amazon' });
+          const infrastructure = new Infrastructure(vm, vm.replicate(sparkWorkerCount + 1));
+
+          const spark = new Spark(sparkWorkerCount);
+          spark.exposeUIToPublic();
+
+          spark.deploy(infrastructure);
+        ```
+    - numberid: "03"
+      title: Deploy to cloud
+      headline: Deploy applications to the cloud on Kubernetes
+      code: |
+        ```markup.line-numbers
+          $ kelda run ./myBlueprint.js
+        ```
+    - numberid: "04"
+      title: Monitor
+      headline: Keep tabs on your deployment
+      code: |
+        ```markup.line-numbers
+          $ kelda show
+          $ kelda ssh container_name
+          $ kelda logs container_name
+          $ kelda stop
+        ```
+  cta:
+    copy: Get started now →
+    linksto: "/contact"
 ---

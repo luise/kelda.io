@@ -91,4 +91,36 @@
     </div>
   </div>
 </section>
+
+<section class="tour">
+  <div class="container">
+    <div class="row">
+      <h1>{{ .Site.Data.landing.tour.headline | markdownify }}</h1>
+      <h2>{{ .Site.Data.landing.tour.subhead | markdownify }}</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="steps slider">
+        {{ range .Site.Data.landing.tour.steps }}
+          <div class="step">
+            <div class="code light-code">{{ .code | markdownify }}</div>
+            <div class="action-bar">
+              <p>{{ .headline }}</p>
+              <button class="btn-primary next">Next</button>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <nav>
+        {{ range .Site.Data.landing.tour.steps }}
+          <button class="btn-tour">{{ .title }}<span>{{ .numberid }}</span></button>
+        {{ end }}
+        <hr/>
+        <a href="{{ .Site.Data.landing.tour.cta.linksto }}" class="text-link">{{ .Site.Data.landing.tour.cta.copy }}</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
 {{ partial "footer" .Site.Data.global }}
