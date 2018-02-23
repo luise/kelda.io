@@ -20,7 +20,6 @@
 
   &.dark:not(.light) {
     background: transparent;
-    box-shadow: none;
 
     .logo-dark {
       opacity: 1;
@@ -33,6 +32,10 @@
     .nav-link {
       color: white;
     }
+  }
+
+  &:not(.light) {
+    box-shadow: none;
   }
 
   .logo {

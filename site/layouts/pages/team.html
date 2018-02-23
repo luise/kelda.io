@@ -1,0 +1,49 @@
+{{ partial "header" . }}
+
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="hero-copy">
+        <h1>{{ .Site.Data.team.headline | markdownify }}</h1>
+        <h2>{{ .Site.Data.team.subhead | markdownify }}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="employees-list">
+  <div class="container">
+    <div class="row">
+      {{ range .Site.Data.team.employees }}
+        <a href="{{ if .email }}mailto:{{ .email }}{{ else }}#{{ end }}" class="employee">
+          <div class="employee-info">
+            <img src="{{ .imagepath }}"/>
+            <p>
+              <strong>{{ .name | markdownify }}</strong>
+              {{ .title }}
+              {{ if .email }}<span class="text-link">{{ .email }}</span>{{ end }}
+            </p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="advisors-list">
+  <div class="container">
+    <div class="row">
+      <h2>{{ .Site.Data.team.advisorsheadline | markdownify }}</h2>
+    </div>
+    <div class="row">
+      {{ range .Site.Data.team.advisors }}
+        <div class="advisor">
+          <strong>{{ .name }}</strong>
+          {{ .blurb | markdownify }}
+        </div class="advisor">
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "footer" .Site.Data.global.footer }}

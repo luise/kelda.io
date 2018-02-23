@@ -2,7 +2,7 @@
 <html lang="{{ $.Site.Language.Lang }}">
   <head>
     <meta charset="utf-8">
-    <title>{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ if eq .Title .Site.Title }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="{{ $.Site.BaseURL }}">
     <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon.png">
@@ -25,10 +25,10 @@
     {{ end }}
 
   </head>
-  <body class="{{ if .Title }}{{ .Title | urlize }}{{ else }}landing{{ end }}">
-    <header id="header" class='{{ if ne .Title "team" }}dark{{ end }}'>
+  <body class="{{ if eq .Title .Site.Title }}landing{{ else }}{{ .Title | urlize }}{{ end }}">
+    <header id="header" class='{{ if ne .Title "Team" }}dark{{ end }}'>
       <nav class="clearfix">
-        {{ range .nav }}
+        {{ range .Site.Data.global.nav }}
           <a href='{{ .linksto }}' class='{{ if eq .type "logo" }}logo{{ else if eq .type "text"}}nav-link{{ else if eq .type "cta" }}btn-primary{{ end }} {{ .label | urlize }}
           '>{{ if eq .type "logo" }}<img class="logo-dark" src="/img/logo-dark.svg" alt="Kelda"/><img class="logo-light" src="/img/logo-light.svg" alt="Kelda"/>{{ end }}{{ .label }}</a>
         {{ end }}

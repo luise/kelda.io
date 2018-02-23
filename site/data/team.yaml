@@ -1,0 +1,57 @@
+---
+headline: Meet the Team
+subhead: "We are a fun and ambitious team working out of downtown Berkeley. If you find yourself in the area, come get a cup of coffee!"
+
+employees:
+  - name: Ethan J. Jackson
+    imagepath: "/img/ethan.png"
+    title: Founder, CEO
+    email: ethan@kelda.io
+  - name: Kevin Lin
+    imagepath: "/img/kevin.png"
+    title: Co-Founder, Engineer
+    email: kevin@kelda.io
+  - name: Luise Valentin
+    imagepath: "/img/luise.png"
+    title: Co-Founder, Product Manager
+    email: luise@kelda.io
+  - name: Eli Lipsitz
+    imagepath: "/img/eli.png"
+    title: Intern, Software Engineering
+  - name: "You? _We're hiring!_"
+    imagepath: "/img/default-profile.png"
+    title: "Apply now at "
+    email: jobs@kelda.io
+
+advisorsheadline: Meet the Advisors
+advisors:
+  - name: Ion Stoica
+    blurb: |
+
+      Co-Founder of Databricks
+
+      Computer Science Professor at UC Berkeley
+
+  - name: Kakul Srivastava
+    blurb: |
+
+      Former VP of Product at GitHub
+
+      Chief Product Officer at WeWork
+  - name: Scott Shenker
+    blurb: |
+
+      Co-Founder of Nicira Networks
+
+      Co-Founder of Databricks
+
+      Computer Science Professor at UC Berkeley
+  - name: Ali Ghodsi
+    blurb: |
+
+      CEO and Co-Founder of Databricks
+  - name: Jim Walker
+    blurb: |
+
+      Former VP of Marketing at CoreOS
+---
