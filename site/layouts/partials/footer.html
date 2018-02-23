@@ -1,3 +1,21 @@
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="blurb">
+          <img class="logo-light" src="/img/logo-light.svg" alt="Kelda"/>
+          <p>{{ .blurb | markdownify }}</p>
+        </div>
+        <div class="sitemap">
+          <p>
+            {{ range .sitemap }}
+              <a href="{{ .linksto }}" class="sitemap-link">{{ .label }}</a>
+            {{ end }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   {{ partial "scripts" . }}
   </body>
 </html>

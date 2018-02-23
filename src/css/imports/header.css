@@ -20,6 +20,7 @@
 
   &.dark:not(.light) {
     background: transparent;
+    box-shadow: none;
 
     .logo-dark {
       opacity: 1;

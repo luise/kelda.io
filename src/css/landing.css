@@ -395,6 +395,7 @@
 
     .actions {
       flex-column: 4;
+      padding-top: 2px;
 
       .btn-icon {
         display: flex;

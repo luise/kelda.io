@@ -15,4 +15,18 @@ nav:
   - label: "Get in touch"
     type: "cta"
     linkto: "/contact"
+
+footer:
+  blurb: "Kelda is a simple way to configure, run, and manage containerized applications in the cloud. Configure in Javascript and manage in the CLI."
+  sitemap:
+    - label: Home
+      linksto: "/"
+    - label: GitHub
+      linksto: "https://github.com/kelda/kelda"
+    - label: Meet the Team
+      linksto: "/team"
+    - label: Documentation
+      linksto: "http://docs.kelda.io/"
+    - label: Get in Touch
+      linksto: "/contact"
 ---

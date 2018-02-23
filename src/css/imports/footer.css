@@ -1,0 +1,38 @@
+#footer {
+  background: $lightestGrey;
+  background: url(/img/footer-bg.jpg) no-repeat bottom center;
+  background-size: cover;
+  padding: $large 0;
+  position: relative;
+  z-index: 3;
+
+  .blurb {
+    flex-column: 8;
+
+    p {
+      display: block;
+      margin-top: $small;
+      max-width: 450px;
+    }
+  }
+
+
+  .sitemap {
+    flex-column: 4;
+    margin-top: 91px;
+
+    .sitemap-link {
+      display: inline-block;
+      font-weight: $bold;
+      color: $grey;
+      width: calc((100% - 20px) / 2);
+
+      &:visited,
+      &:active,
+      &:focus {
+        font-weight: $bold;
+        color: $grey;
+      }
+    }
+  }
+}
