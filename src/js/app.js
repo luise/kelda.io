@@ -96,3 +96,9 @@ function brightenHeader() {
 brightenHeader();
 
 $(window).on('scroll', brightenHeader);
+
+// toggle email drip input
+$('.email-drip').click(function() {
+  $(this).addClass('focused');
+  $('.mc-form .email').focus();
+})

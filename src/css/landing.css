@@ -5,6 +5,7 @@
     background: url(/img/hero-bg.jpg) no-repeat bottom center;
     background-size: cover;
     position: relative;
+    min-height: 732px;
     z-index: 3;
 
     .container {
@@ -395,6 +396,7 @@
 
     .actions {
       flex-column: 4;
+      font-weight: $bold;
       padding-top: 2px;
 
       .btn-icon {
@@ -410,6 +412,56 @@
         img {
           margin-bottom: -12px;
           transition: transform .2s ease;
+        }
+
+        &.email-drip {
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+
+          &.focused {
+            img {
+              transform: translate3d(-4px,0,0);
+            }
+
+            .mc-form {
+              transform: translate3d(0,0,0);
+            }
+          }
+
+          .cover {
+            background: url('/img/white-pixel.jpg') no-repeat 0 10px;
+            background-size: $small $large;
+            position: relative;
+            z-index: 2;
+          }
+
+          .mc-form {
+            position: absolute;
+            top: 10px;
+            left: 68px;
+            width: 100%;
+            box-sizing: border-box;
+            transform: translate3d(calc(-100% + 70px),0,0);
+            transition: transform .2s ease;
+
+            input:not(.btn-primary) {
+              padding: 22px $tiny 22px $small;
+              border: 1px solid $lightestGrey;
+              outline: none;
+              box-shadow: none;
+              box-sizing: border-box;
+              width: calc(100% - 115px);
+            }
+
+            .btn-primary {
+              padding: 22px $tiny $small $tiny;
+              position: relative;
+              top: -1px;
+              margin-left: -5px;
+              border-radius: 0 $smallBorderRadius $smallBorderRadius 0;
+            }
+          }
         }
       }
     }
