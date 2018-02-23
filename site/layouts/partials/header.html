@@ -26,7 +26,7 @@
 
   </head>
   <body class="{{ if eq .Title .Site.Title }}landing{{ else }}{{ .Title | urlize }}{{ end }}">
-    <header id="header" class='{{ if ne .Title "Team" }}dark{{ end }}'>
+    <header id="header" class='{{ if or (eq .Title .Site.Title) (eq .Title "Contact") }}dark{{ end }}'>
       <nav class="clearfix">
         {{ range .Site.Data.global.nav }}
           <a href='{{ .linksto }}' class='{{ if eq .type "logo" }}logo{{ else if eq .type "text"}}nav-link{{ else if eq .type "cta" }}btn-primary{{ end }} {{ .label | urlize }}

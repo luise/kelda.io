@@ -1,0 +1,14 @@
+{{ partial "header" . }}
+
+<section class="single">
+  <div class="container">
+    <div class="row">
+      <div class="hero-copy">
+        <h1>{{ .Params.headline | markdownify }}</h1>
+        <h2>{{ .Params.subhead | markdownify }}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer" .Site.Data.global.footer }}
