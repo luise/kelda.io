@@ -1,14 +1,31 @@
 .team {
   .hero {
-    background: url(/img/team-bg.jpg) no-repeat right bottom;
-    background-size: 50%;
+
+    @media screen and (min-width: $tablet) {
+      background: url(/img/team-bg.jpg) no-repeat right center;
+      background-size: 50%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-position: right bottom;
+    }
 
     .container {
-      padding: 80px 0 $large 0;
+      padding: $large 34px $large 34px;
+
+      @media screen and (min-width: $tablet) {
+        padding: 80px $small $large $small;
+      }
+
+      @media screen and (min-width: $desktop) {
+        padding: 80px 0 $large 0;
+      }
     }
 
     .hero-copy {
-      flex-column: 7;
+      @media screen and (min-width: $tablet) {
+        flex-column: 7;
+      }
 
       h1 {
         margin-bottom: 31px;
@@ -17,13 +34,25 @@
   }
 
   .employees-list {
-    padding: 0 0 $large 0;
+    padding: 0 $small $large $small;
+
+    @media screen and (min-width: $tablet) {
+      padding: 0 14px $large 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 0 $large 0;
+    }
 
     .employee {
-      flex-column: 4;
       color: $grey;
       font-weight: $regular;
       margin-bottom: 20px;
+      width: 100%;
+
+      @media screen and (min-width: $tablet) {
+        flex-column: 4;
+      }
 
       &:last-child .text-link {
         display: inline;
@@ -58,17 +87,31 @@
   }
 
   .advisors-list {
-    padding-bottom: $xl;
+    padding: 0 $small;
+
+    @media screen and (min-width: $tablet) {
+      padding: 0 14px $medium 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 0 $xl 0;
+    }
 
     h2 {
-      flex-column: 12;
       font-weight: $bold;
       margin-bottom: $small;
+
+      @media screen and (min-width: $tablet) {
+        flex-column: 12;
+      }
     }
 
     .advisor {
-      flex-column: 4;
       margin-bottom: $tiny;
+
+      @media screen and (min-width: $tablet) {
+        flex-column: 4;
+      }
 
       strong {
         display: block;
