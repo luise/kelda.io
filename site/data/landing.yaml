@@ -36,8 +36,8 @@ hero:
     ```js
       // Keep sensitive information secure
       app.env = {
-        GITHUB_OAUTH_TOKEN: new
-        Secret('githubToken'),
+        GITHUB_OAUTH_TOKEN:
+        new Secret('githubToken'),
       }
     ```
 
@@ -96,11 +96,11 @@ simplifycode:
       filename: deployment.js
       snippet: |
         ```js.line-numbers
-          const nginx = new Container('nginx', 'nginx:1.7.9');
+          const nginx = new Container(
+            'nginx',
+            'nginx:1.7.9'
+          );
           allowTraffic(publicInternet, nginx, 80);
-
-
-
 
 
 

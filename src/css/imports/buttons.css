@@ -83,7 +83,8 @@ button {
   border: 1px solid rgba(255,255,255,0.2);
   box-sizing: border-box;
   color: white;
-  padding: 13px $tiny;
+  padding: 14px $tiny;
+  white-space: nowrap;
 }
 
 .btn-urgent {
@@ -138,7 +139,10 @@ button {
   margin: 6px 0 -9px 0;
 }
 
-.text-link {
+.text-link,
+.text-link:visited,
+.text-link:active,
+.text-link:focus {
   font-weight: $bold;
   color: $purple;
 }

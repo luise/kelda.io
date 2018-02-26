@@ -1,25 +1,47 @@
 #footer {
-  background: $lightestGrey;
-  background: url(/img/footer-bg.jpg) no-repeat bottom center;
-  background-size: cover;
-  padding: $large 0;
+  background: $lightestGrey url(/img/footer-bg.jpg) no-repeat top center;
+  background-size: contain;
+  padding: $xxl $small $large $small;
   position: relative;
   z-index: 3;
 
+  @media screen and (min-width: $mobile) {
+    padding: $large $small;
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-position: bottom center;
+    background-size: cover;
+    padding: $large 14px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: $large 0;
+  }
+
   .blurb {
-    flex-column: 8;
+    @media screen and (min-width: $tablet) {
+      flex-column: 8;
+    }
 
     p {
       display: block;
       margin-top: $small;
-      max-width: 450px;
+
+      @media screen and (min-width: $tablet) {
+        max-width: 450px;
+      }
     }
   }
 
 
   .sitemap {
-    flex-column: 4;
-    margin-top: 91px;
+    margin-top: 51px;
+
+    @media screen and (min-width: $tablet) {
+      flex-column: 4;
+      margin-top: 91px;
+    }
 
     .sitemap-link {
       display: inline-block;

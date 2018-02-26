@@ -9,17 +9,27 @@ html {
 h1 {
   font-family: $avenir;
   font-weight: $bold;
-  font-size: $large;
-  line-height: 88px;
+  font-size: 32px;
+  line-height: $medium;
   letter-spacing: -1px;
   margin: -18px 0 -28px 0;
+
+  @media screen and (min-width: $tablet) {
+    font-size: $large;
+    line-height: 88px;
+  }
 }
 
 h2 {
-  font-size: $small;
+  font-size: $tiny;
   font-weight: $regular;
-  line-height: $medium;
+  line-height: $small;
   margin: -5px 0 -21px 0;
+
+  @media screen and (min-width: $tablet) {
+    font-size: $small;
+    line-height: $medium;
+  }
 
   &.section-label {
     border-bottom: 1px solid $grey;
