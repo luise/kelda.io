@@ -2,6 +2,12 @@
   background: $lightGrey;
 
   #header {
+    display: none;
+
+    @media screen and (min-width: $mobile) {
+      display: initial;
+    }
+
     .nav-link.team {
       margin-right: 0;
     }
@@ -18,24 +24,54 @@
     position: relative;
     z-index: 3;
 
-    .container:first-child {
-      padding: $large 0;
+    @media screen and (max-width: $mobileMax) {
+      padding-top: 0 !important;
+    }
+
+
+    .container {
+      &:first-child {
+        padding: $large $small;
+
+        @media screen and (min-width: $tablet) {
+          padding: $large 0;
+        }
+      }
+
+      &:last-child {
+        padding: 0 34px;
+
+        @media screen and (min-width: $tablet) {
+          padding: 0 $small;
+        }
+      }
     }
 
     h1 {
       color: white;
-      font-size: $medium;
-      line-height: 48px;
       text-align: center;
+      width: 100%;
+
+      @media screen and (min-width: $tablet) {
+        font-size: $medium;
+        line-height: 48px;
+      }
+    }
+
+    *[class*="-fields"] {
       width: 100%;
     }
 
     .small-fields {
-      flex-column: 4;
+      @media screen and (min-width: $tablet) {
+        flex-column: 4;
+      }
     }
 
     .large-fields {
-      flex-column: 8;
+      @media screen and (min-width: $tablet) {
+        flex-column: 8;
+      }
     }
 
     input,
@@ -63,7 +99,7 @@
     }
 
     textarea {
-      min-height: 240px;
+      min-height: 176px;
     }
 
     .btn-primary {
@@ -73,6 +109,14 @@
         content: '→';
         float: right;
       }
+    }
+  }
+
+  #footer {
+    padding-top: $micro;
+
+    @media screen and (min-width: $desktop) {
+      background-position: center -10vw;
     }
   }
 }

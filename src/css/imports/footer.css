@@ -43,18 +43,17 @@
       margin-top: 91px;
     }
 
-    .sitemap-link {
-      display: inline-block;
+    .sitemap-link,
+    .sitemap-link:visited,
+    .sitemap-link:active,
+    .sitemap-link:focus {
       font-weight: $bold;
       color: $grey;
-      width: calc((100% - 20px) / 2);
+    }
 
-      &:visited,
-      &:active,
-      &:focus {
-        font-weight: $bold;
-        color: $grey;
-      }
+    .sitemap-link {
+      display: inline-block;
+      width: calc((100% - 20px) / 2);
     }
   }
 }
