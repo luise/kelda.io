@@ -2,7 +2,7 @@
   .hero {
 
     @media screen and (min-width: $tablet) {
-      background: url(/img/team-bg.jpg) no-repeat right center at-2x;
+      background: url(/img/team-bg.jpg) no-repeat right center;
       background-size: 50%;
     }
 

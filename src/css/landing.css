@@ -2,7 +2,7 @@
   background: $lightGrey;
 
   .hero {
-    background: url(/img/hero-bg.jpg) no-repeat bottom center at-2x;
+    background: url(/img/hero-bg.jpg) no-repeat bottom center;
     background-size: cover;
     padding: 0 $small;
     position: relative;
@@ -163,7 +163,7 @@
 
 
     .diagram {
-      background: url(/img/diagram-bg.png) no-repeat 50px 68px at-2x;
+      background: url(/img/diagram-bg.png) no-repeat 50px 68px;
       background-size: calc(100% - $small * 2) auto;
       padding-top: $medium;
       position: relative;

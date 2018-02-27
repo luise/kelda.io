@@ -1,5 +1,5 @@
 #footer {
-  background: $lightestGrey url(/img/footer-bg.jpg) no-repeat top center at-2x;
+  background: $lightestGrey url(/img/footer-bg.jpg) no-repeat top center;
   background-size: contain;
   padding: $xxl $small $large $small;
   position: relative;
