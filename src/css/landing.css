@@ -339,6 +339,21 @@
         }
       }
 
+      &:first-child img {
+        height: $medium;
+        width: 54px;
+      }
+
+      img {
+        height: $medium;
+        width: $medium;
+      }
+
+      &:last-child img {
+        height: 42px;
+        width: 42px;
+      }
+
       strong {
         display: block;
         margin-bottom: 20px;

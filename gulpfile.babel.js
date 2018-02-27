@@ -131,7 +131,8 @@ gulp.task("optimize", () => (
     }))
     .pipe(imagemin([
       imagemin.jpegtran({
-        progressive: true
+        progressive: true,
+        sharpen: true
       }),
       imagemin.optipng({
         optimizationLevel: 7
