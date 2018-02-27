@@ -523,6 +523,12 @@
         margin-bottom: 0;
         width: initial;
       }
+
+      &.monitor {
+        .toolbar {
+          display: none;
+        }
+      }
     }
 
     .active.step {

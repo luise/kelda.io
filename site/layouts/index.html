@@ -103,7 +103,7 @@
     <div class="row">
       <div class="steps slider">
         {{ range .Site.Data.landing.tour.steps }}
-          <div class="step">
+          <div class="step {{ .title | urlize }}">
             <div class="code light-code">{{ .code | markdownify }}</div>
             <div class="action-bar">
               <p>{{ .headline }}</p>

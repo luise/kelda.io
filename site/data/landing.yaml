@@ -89,6 +89,7 @@ simplifycode:
                 - name: nginx
                   image: nginx:1.7.9
                   ports:
+                  - containerPort: 80
         ```
     withkelda:
       imagepath: "/img/kelda-icon.png"
@@ -101,6 +102,7 @@ simplifycode:
             'nginx:1.7.9'
           );
           allowTraffic(publicInternet, nginx, 80);
+
 
 
 
@@ -157,9 +159,17 @@ tour:
       code: |
         ```markup.line-numbers
           $ kelda show
-          $ kelda ssh container_name
-          $ kelda logs container_name
-          $ kelda stop
+          MACHINE         ROLE      PROVIDER    REGION       SIZE         PUBLIC IP        STATUS
+          i-0735704120    Master    Amazon      us-west-1    m3.medium    52.53.157.167    connected
+          i-09329093f9    Worker    Amazon      us-west-1    m3.medium    18.144.7.18      connected
+          ...
+
+          CONTAINER       MACHINE         COMMAND HOSTNAME        STATUS     CREATED              PUBLIC IP
+          0b8eb391d8ce    i-027e5d72ed    ...     spark-master    running    About an hour ago    18.144.7.18:8080
+          ...
+
+          # SSH into containers.
+          $ kelda ssh spark-master
         ```
   cta:
     copy: Get started now →
