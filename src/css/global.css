@@ -12,6 +12,13 @@ body {
   font-family: $roboto;
 }
 
+*::-webkit-scrollbar-track {
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background: none;
+}
 
 .toolbar-item a {
   border-radius: 99px !important;
