@@ -104,7 +104,7 @@ gulp.task("server", ["hugo", "css", "js", "fonts", "images"], () => {
 // Optimize images through compression and responsive sizes
 gulp.task("optimize", () => (
   // resize and compress images
-   gulp.src(["dist/img/**/*.jpg", "dist/img/**/*.png", "!dist/img/**/white-pixel.jpg"])
+   gulp.src(["dist/img/**/*.jpg", "dist/img/**/*.png", "!dist/img/**/white-pixel.jpg", "!dist/img/favicon/**/*"])
     .pipe($.responsive({
       '**/*.jpg': [{
         width: '33.33%',
