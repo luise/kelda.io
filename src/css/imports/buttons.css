@@ -22,6 +22,7 @@
 
 a,
 button {
+  -webkit-appearance: none;
   cursor: pointer;
   outline: none;
   font-weight: $regular;

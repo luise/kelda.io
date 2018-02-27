@@ -4,22 +4,22 @@ subhead: "We are a fun and ambitious team working out of downtown Berkeley. If y
 
 employees:
   - name: Ethan J. Jackson
-    imagepath: "/img/ethan.png"
+    imagepath: "/img/ethan.jpg"
     title: Founder, CEO
     email: ethan@kelda.io
   - name: Kevin Lin
-    imagepath: "/img/kevin.png"
+    imagepath: "/img/kevin.jpg"
     title: Co-Founder, Engineer
     email: kevin@kelda.io
   - name: Luise Valentin
-    imagepath: "/img/luise.png"
+    imagepath: "/img/luise.jpg"
     title: Co-Founder, Product Manager
     email: luise@kelda.io
   - name: Eli Lipsitz
-    imagepath: "/img/eli.png"
+    imagepath: "/img/eli.jpg"
     title: Intern, Software Engineering
   - name: "You? _We're hiring!_"
-    imagepath: "/img/default-profile.png"
+    imagepath: "/img/default-profile.jpg"
     title: "Apply now at "
     email: jobs@kelda.io
 

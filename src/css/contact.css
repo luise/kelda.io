@@ -1,5 +1,4 @@
 .contact {
-  background: $lightGrey;
 
   #header {
     display: none;
@@ -18,7 +17,8 @@
   }
 
   .hero {
-    background: url(/img/hero-bg.jpg) no-repeat bottom center;
+    background-color: white;
+    background: url(/img/hero-bg.jpg) no-repeat bottom center at-2x;
     background-size: cover;
     padding-bottom: $xl;
     position: relative;
@@ -115,8 +115,11 @@
   #footer {
     padding-top: $micro;
 
-    @media screen and (min-width: $desktop) {
-      background-position: center -10vw;
+    @media screen and (min-height: 814px) {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
     }
   }
 }

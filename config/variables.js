@@ -22,8 +22,8 @@ module.exports = {
   black: 900,
 
   // fonts
-  roboto: "Roboto, 'Roboto', sans-serif;",
-  avenir: "Avenir, 'avenir', 'Roboto', sans-serif;",
+  roboto: "'Roboto', sans-serif;",
+  avenir: "'avenir', 'Roboto', sans-serif;",
 
   // padding
   micro: '8px',

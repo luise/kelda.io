@@ -2,7 +2,7 @@
   background: $lightGrey;
 
   .hero {
-    background: url(/img/hero-bg.jpg) no-repeat bottom center;
+    background: url(/img/hero-bg.jpg) no-repeat bottom center at-2x;
     background-size: cover;
     padding: 0 $small;
     position: relative;
@@ -52,7 +52,7 @@
 
             &:after {
               background: $blue;
-              bottom: 0;
+              bottom: 3px;
               content: '';
               height: 2px;
               position: absolute;
@@ -72,7 +72,7 @@
         }
       }
 
-      code {
+      .btn-code {
         display: block;
         margin-top: $medium;
         overflow: scroll;
@@ -81,7 +81,7 @@
           display: inline-flex;
           margin-right: -10px;
           margin-top: 73px;
-          padding-right: $large;
+          padding: 14px $large 12px $tiny;
         }
       }
 
@@ -163,7 +163,7 @@
 
 
     .diagram {
-      background: url(/img/diagram-bg.png) no-repeat 50px 68px;
+      background: url(/img/diagram-bg.png) no-repeat 50px 68px at-2x;
       background-size: calc(100% - $small * 2) auto;
       padding-top: $medium;
       position: relative;
@@ -320,6 +320,13 @@
 
     .third {
       padding: 0 0 $medium 0;
+
+      @media screen and (min-width: $tablet) {
+        &:not(:last-child) {
+          padding-right: $small;
+        }
+      }
+
       strong {
         display: block;
         margin-bottom: 20px;
@@ -405,6 +412,8 @@
       img {
         float: left;
         margin-right: $tiny;
+        height: 66px;
+        width: 66px;
       }
     }
 
@@ -624,6 +633,7 @@
         display: flex;
         margin: 0;
         padding: 0;
+        width: calc(100% + $tiny);
 
         &:hover img {
           transform: translate3d(-4px,0,0);
@@ -632,6 +642,8 @@
         img {
           margin-bottom: -12px;
           transition: transform .2s ease;
+          height: 96px;
+          width: 96px;
         }
 
         &.email-drip {
@@ -651,7 +663,7 @@
 
           .cover {
             background: url('/img/white-pixel.jpg') no-repeat 0 10px;
-            background-size: $small $large;
+            background-size: 65px;
             position: relative;
             z-index: 2;
           }
@@ -666,8 +678,11 @@
             transition: transform .2s ease;
 
             input:not(.btn-primary) {
-              padding: 22px $tiny 22px $small;
+              -webkit-appearance: none;
+              padding: 22px $tiny 21px $small;
               border: 1px solid $lightestGrey;
+              border-right: none;
+              border-radius: 0;
               outline: none;
               box-shadow: none;
               box-sizing: border-box;
@@ -675,10 +690,10 @@
             }
 
             .btn-primary {
-              padding: 22px $tiny $small $tiny;
+              padding: $small $tiny 22px $tiny;
               position: relative;
-              top: -1px;
-              margin-left: -5px;
+              top: 0;
+              margin-left: -8px;
               border-radius: 0 $smallBorderRadius $smallBorderRadius 0;
             }
           }

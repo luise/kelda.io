@@ -104,24 +104,24 @@ gulp.task("server", ["hugo", "css", "js", "fonts", "images"], () => {
 // Optimize images through compression and responsive sizes
 gulp.task("optimize", () => (
   // resize and compress images
-   gulp.src(["dist/img/**/*.jpg", "dist/img/**/*.png"])
+   gulp.src(["dist/img/**/*.jpg", "dist/img/**/*.png", "!dist/img/**/white-pixel.jpg"])
     .pipe($.responsive({
       '**/*.jpg': [{
-        width: 500,
+        width: '33.33%',
       }, {
-        width: 500 * 2,
+        width: '66.66%',
         rename: { suffix: '@2x' }
       }, {
-        width: 500 * 3,
+        width: '100%',
         rename: { suffix: '@3x' }
       }],
       '**/*.png': [{
-        width: 500,
+        width: '33.33%',
       }, {
-        width: 500 * 2,
+        width: '66.66%',
         rename: { suffix: '@2x' }
       }, {
-        width: 500 * 3,
+        width: '100%',
         rename: { suffix: '@3x' }
       }],
     }, {
