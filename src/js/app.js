@@ -1,5 +1,10 @@
 var winWidth  = $(window).width();
 
+// remove generated srcsets for svgs
+$( "img[src*='svg']" ).each(function() {
+  $(this).removeAttr("srcset");
+})
+
 // turn sticky header white on scroll
 function atTop() {
   if ($(window).scrollTop() === 0) {
@@ -119,10 +124,5 @@ if ($('.landing').length) {
   $('.email-drip').click(function() {
     $(this).addClass('focused');
     $('.mc-form .email').focus();
-  })
-
-  // remove srcsets for svg
-  $( "img[src*='svg']" ).each(function() {
-    $(this).removeAttr("srcset");
   })
 };

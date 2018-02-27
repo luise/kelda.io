@@ -7,6 +7,7 @@
     background: $lightestGrey url(/img/footer-bg@3x.jpg) no-repeat top center;
   }
   background-size: contain;
+  box-shadow: 0 250px 0 $lightestGrey;
   padding: $xxl $small $large $small;
   position: relative;
   z-index: 3;
