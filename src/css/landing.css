@@ -93,7 +93,9 @@
       .btn-copy {
         display: none;
         position: relative;
+        vertical-align: bottom;
         z-index: 2;
+        padding-bottom: 13px;
 
         @media screen and (min-width: $tablet) {
           display: initial;
@@ -704,7 +706,6 @@
             transition: transform .2s ease;
 
             input:not(.btn-primary) {
-              -webkit-appearance: none;
               padding: 22px $tiny 21px $small;
               border: 1px solid $lightestGrey;
               border-right: none;
@@ -713,6 +714,11 @@
               box-shadow: none;
               box-sizing: border-box;
               width: calc(100% - 115px);
+
+              &::placeholder {
+                color: $lighterGrey;
+                font-family: $roboto;
+              }
             }
 
             .btn-primary {
