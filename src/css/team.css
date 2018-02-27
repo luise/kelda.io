@@ -3,6 +3,12 @@
 
     @media screen and (min-width: $tablet) {
       background: url(/img/team-bg.jpg) no-repeat right center;
+      $doubleDensity {
+        background: url(/img/team-bg@2x.jpg) no-repeat right center;
+      }
+      $tripleDensity {
+        background: url(/img/team-bg@3x.jpg) no-repeat right center;
+      }
       background-size: 50%;
     }
 

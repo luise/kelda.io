@@ -1,5 +1,11 @@
 #footer {
   background: $lightestGrey url(/img/footer-bg.jpg) no-repeat top center;
+  $doubleDensity {
+    background: $lightestGrey url(/img/footer-bg@2x.jpg) no-repeat top center;
+  }
+  $tripleDensity {
+    background: $lightestGrey url(/img/footer-bg@3x.jpg) no-repeat top center;
+  }
   background-size: contain;
   padding: $xxl $small $large $small;
   position: relative;

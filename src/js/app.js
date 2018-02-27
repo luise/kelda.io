@@ -120,4 +120,9 @@ if ($('.landing').length) {
     $(this).addClass('focused');
     $('.mc-form .email').focus();
   })
+
+  // remove srcsets for svg
+  $( "img[src*='svg']" ).each(function() {
+    $(this).removeAttr("srcset");
+  })
 };
