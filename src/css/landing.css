@@ -551,6 +551,19 @@
         width: initial;
       }
 
+      &.install,
+      &.deploy-to-cloud {
+        .language-markup:nth-child(2){
+          padding-left: 18px;
+
+          &:before {
+            content: '$ ';
+            left: 18px;
+            position: absolute;
+          }
+        }
+      }
+
       &.monitor {
         .toolbar {
           display: none;

@@ -126,7 +126,7 @@ tour:
       headline: Install Kelda
       code: |
         ```markup.line-numbers
-          $ npm install -g @kelda/install
+          npm install -g @kelda/install
         ```
     - numberid: "02"
       title: Describe in JS
@@ -151,7 +151,7 @@ tour:
       headline: Deploy applications to the cloud on Kubernetes
       code: |
         ```markup.line-numbers
-          $ kelda run ./myBlueprint.js
+          kelda run ./myBlueprint.js
         ```
     - numberid: "04"
       title: Monitor
