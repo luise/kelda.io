@@ -28,6 +28,12 @@ span,
   }
 }
 
+.toolbar {
+  @media screen and (max-width: $tabletMax) {
+    display: none;
+  }
+}
+
 .toolbar-item a {
   border-radius: 99px !important;
   font-size: 14px !important;
