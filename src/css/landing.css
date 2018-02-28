@@ -21,6 +21,7 @@
     .container {
       padding-top: $medium;
       padding-bottom: 134px;
+      position: relative;
 
       @media screen and (min-width: $tablet) {
         padding-top: $xl;
@@ -100,6 +101,18 @@
         @media screen and (min-width: $tablet) {
           display: initial;
         }
+
+        &.copied {
+          span {
+            display: none;
+          }
+
+          &:after {
+            content: 'Copied!';
+            font-size: $tiny;
+            line-height: 18px;
+          }
+        }
       }
 
       .subtext {
@@ -119,7 +132,14 @@
 
     .top-code {
       @media screen and (min-width: $tablet) {
-        display: none !important;
+        display: block !important;
+        position: absolute !important;
+        right: 0;
+        z-index: 2;
+
+        > .raw-code > pre > *:not(.toolbar) {
+          opacity: 0;
+        }
       }
     }
 
@@ -503,6 +523,8 @@
     .steps {
       padding-left: 0 !important;
       padding-right: 0 !important;
+      margin-bottom: $large;
+      min-height: $xl !important;
 
       @media screen and (min-width: $tablet) {
         flex-column: 9;
@@ -537,12 +559,50 @@
 
     .code {
       padding: 0;
+      overflow: hidden;
 
       pre {
         border-radius: 0;
         background: none;
         margin: 0;
+        overflow: hidden;
         padding: $tiny $tiny $tiny $medium;
+        position: relative;
+
+        code {
+          &:first-child {
+            box-sizing: border-box;
+            border-left: 1px solid white;
+            color: white !important;
+            position: absolute;
+            top: 20px;
+            left: $medium;
+            z-index: 1;
+
+            span {
+              color: white !important;
+            }
+          }
+
+          &:nth-child(2) {
+            -webkit-overflow-scrolling: touch;
+            display: block;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            margin-bottom: -$tiny;
+            padding-bottom: $tiny;
+            position: relative;
+            z-index: 2;
+
+            .line-numbers-rows {
+              display: none;
+            }
+          }
+        }
+
+        .toolbar {
+          z-index: 3;
+        }
       }
 
       .line-numbers-rows {

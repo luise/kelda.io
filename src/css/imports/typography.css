@@ -3,7 +3,7 @@ html {
 }
 
 *::selection {
-  background: $blue;
+  background: $lighterGrey;
 }
 
 h1 {

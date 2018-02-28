@@ -8,7 +8,7 @@
         <h2>{{ .Site.Data.landing.hero.subhead | markdownify }}</h2>
         <div class="npm-copy">
           <code id="npm-code" class="btn-code" value="{{ .Site.Data.landing.hero.npmcode }}">{{ .Site.Data.landing.hero.npmcode }}</code>
-          <button class="btn-primary btn-copy" data-clipboard-target="#npm-code"><i class="copy"></i>Copy</button>
+          <button class="btn-primary btn-copy" data-clipboard-target="#npm-code"><i class="copy"></i><span>Copy</span></button>
           <p class="subtext">{{ .Site.Data.landing.hero.btnsubtext | markdownify }}</p>
         </div>
       </div>

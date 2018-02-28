@@ -36,7 +36,17 @@ if ($('.landing').length) {
 
   // copy functionality
   new Clipboard('.btn-copy');
-  new Clipboard('.hero pre');
+
+  $('.btn-copy').click(function() {
+
+    var copyBtn = $(this);
+
+    copyBtn.addClass('copied');
+
+    setTimeout(function(){
+      copyBtn.removeClass('copied');
+    }, 1000);
+  });
 
   // tooltips
   if (winWidth >= 768) {
@@ -119,6 +129,14 @@ if ($('.landing').length) {
       setTimeout(function(){ $('.tour nav .text-link').removeClass('pulse'); }, 550);
     });
   }
+
+  // make 'copy' button fixed in tour
+  $('.tour .step .code code').each(function() {
+    var copiedSnippet = $(this),
+        parentElement = $(this).parent();
+
+    copiedSnippet.clone().appendTo(parentElement);
+  });
 
   // toggle email drip input
   $('.email-drip').click(function() {

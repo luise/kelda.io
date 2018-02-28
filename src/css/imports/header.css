@@ -4,10 +4,10 @@
   box-shadow: 0 0 $tiny rgba(0,0,0,0.1);
   box-sizing: border-box;
   left: 0;
-  padding: $small;
+  padding: $micro $small;
   position: fixed;
   top: 0;
-  transition: background .2s linear;
+  transition: background .2s linear, padding .2s linear;
   width: 100%;
   z-index: 10000;
 
@@ -37,6 +37,7 @@
 
   &:not(.light) {
     box-shadow: none;
+    padding: $small;
   }
 
   .logo {
