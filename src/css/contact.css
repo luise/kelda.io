@@ -5,6 +5,22 @@
 
     @media screen and (min-width: $mobile) {
       display: initial;
+
+      &.light {
+        background: transparent;
+        position: absolute;
+        padding-top: $small;
+        padding-bottom: $small;
+        box-shadow: none;
+
+        .logo-light {
+          opacity: 0;
+        }
+
+        .logo-dark {
+          opacity: 1;
+        }
+      }
     }
 
     .nav-link.team {
@@ -17,16 +33,16 @@
   }
 
   .hero {
-    background-color: white;
-    background: url(/img/hero-bg.jpg) no-repeat bottom center;
+    background-color: $lightGrey;
+    background: $lightGrey url(/img/hero-bg.jpg) no-repeat bottom center;
     $doubleDensity {
-      background: url(/img/hero-bg@2x.jpg) no-repeat bottom center;
+      background: $lightGrey url(/img/hero-bg@2x.jpg) no-repeat bottom center;
     }
     $tripleDensity {
-      background: url(/img/hero-bg@3x.jpg) no-repeat bottom center;
+      background: $lightGrey url(/img/hero-bg@3x.jpg) no-repeat bottom center;
     }
-    background-size: cover;
-    padding-bottom: $xl;
+    background-size: contain;
+    padding-bottom: $large;
     position: relative;
     z-index: 3;
 
@@ -34,10 +50,18 @@
       padding-top: 0 !important;
     }
 
+    @media screen and (min-width: $tablet) {
+      background-size: cover;
+      padding-bottom: $xl;
+    }
 
     .container {
       &:first-child {
-        padding: $large $small;
+        padding: $large $medium;
+
+        @media screen and (min-width: $mobile) {
+          padding: $large $small;
+        }
 
         @media screen and (min-width: $tablet) {
           padding: $large 0;
