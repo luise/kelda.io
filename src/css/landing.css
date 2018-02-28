@@ -161,11 +161,15 @@
       }
 
       pre {
-        font-size: $tiny;
+        font-size: 12px;
         background: none;
         padding: 0;
         margin: 0 0 $tiny -10px;
         transition: height .2s linear;
+
+        @media screen and (min-width: $mobile) {
+          font-size: 14px;
+        }
 
         @media screen and (min-width: $tablet) {
           font-size: 12px;
