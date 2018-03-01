@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 .gitignore
 .package-lock.json
+**/.DS_Store
