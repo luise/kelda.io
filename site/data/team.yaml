@@ -28,30 +28,28 @@ advisors:
   - name: Ion Stoica
     blurb: |
 
-      Co-Founder of Databricks
+      Professor, UC Berkeley
 
-      Computer Science Professor at UC Berkeley
+      Executive Chairman, Databricks
+
+      CTO, Conviva
 
   - name: Kakul Srivastava
     blurb: |
 
-      Former VP of Product at GitHub
+      Founder CEO, Sublime
 
-      Chief Product Officer at WeWork
+      Former VP of Product, Github
   - name: Scott Shenker
     blurb: |
 
-      Co-Founder of Nicira Networks
-
-      Co-Founder of Databricks
-
-      Computer Science Professor at UC Berkeley
+      Professor, UC Berkeley
   - name: Ali Ghodsi
     blurb: |
 
-      CEO and Co-Founder of Databricks
+      Co-Founder, CEO Databricks
   - name: Jim Walker
     blurb: |
 
-      Former VP of Marketing at CoreOS
+      VP Marketing, OverOps
 ---
