@@ -8,6 +8,7 @@
     "build": "gulp build",
     "build-preview": "gulp build-preview",
     "start": "gulp server",
+    "start-dev": "gulp server-dev",
     "lint": "eslint src"
   },
   "author": "",
@@ -30,6 +31,7 @@
     "file-loader": "^1.1.6",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
+    "gulp-connect": "^5.5.0",
     "gulp-flatten": "^0.4.0",
     "gulp-imagemin": "^4.0.0",
     "gulp-img-retina": "0.0.4",

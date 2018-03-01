@@ -20,6 +20,7 @@ import runSequence from "run-sequence";
 import imagemin from "gulp-imagemin";
 import responsive from "gulp-responsive";
 import imgRetina from "gulp-img-retina";
+import connect from "gulp-connect";
 
 const $ = require('gulp-load-plugins')();
 const browserSync = BrowserSync.create();
@@ -86,7 +87,7 @@ gulp.task("images", () => (
 ));
 
 // Development server with browsersync
-gulp.task("server", ["hugo", "css", "js", "fonts", "images"], () => {
+gulp.task("server-dev", ["hugo", "css", "js", "fonts", "images"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -100,6 +101,14 @@ gulp.task("server", ["hugo", "css", "js", "fonts", "images"], () => {
   watch("./site/**/*", () => { gulp.start(["hugo"]) });
 });
 
+// Production server.
+gulp.task("server", ["hugo", "css", "js", "fonts", "images"], () => {
+  connect.server({
+    root: './dist',
+    port: 80,
+    host: '0.0.0.0',
+  });
+});
 
 // Optimize images through compression and responsive sizes
 gulp.task("optimize", () => (
