@@ -1,0 +1,9 @@
+{
+  "name": "@kelda/kelda.io",
+  "version": "0.0.1",
+  "main": "./deploy.js",
+  "license": "MIT",
+  "dependencies": {
+    "kelda": ">=0.0.5 <1.0.0"
+  }
+}
