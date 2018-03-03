@@ -1,7 +1,7 @@
 ---
 hero:
-  headline: "Soar through your <em class='tooltip' title='Containers are a combination of several kernel features including SELinux, Linux namespaces, and control groups, providing isolation of end user processes, networking, and filesystem space.'>Containerized Application</em> configurations with Kelda."
-  subhead: "Simply describe with Javascript and deploy from the command line."
+  headline: "A Straightforward Way to Configure <em class='tooltip' title='Containers are an easy way to package an application&#39;s code, configurations, and dependencies. When an application is containerized, it will run the same way regardless of where you run it.'>Containerized</em> Applications."
+  subhead: "Simply describe with JavaScript and deploy from the command line."
   npmcode: "npm install -g @kelda/install"
   btnsubtext: "Got questions? [Take a tour of Kelda →](http://docs.kelda.io/#quick-start)"
   examplecode: |
@@ -44,10 +44,11 @@ whatiskelda:
   headline: What is Kelda?
   subhead: Kelda is a simple way to configure, run, and manage containerized applications in the cloud.
   copy: |
-    Kelda’s intuitive, high-level JavaScript API makes it easy to describe the systems you want to run in the cloud — that is, the virtual machines, containers, network policies, and more.
+    Kelda’s intuitive JavaScript API makes it easy to describe the systems you want to run in the cloud — that is, the virtual machines, containers, network policies, and more.
 
     Just pass this high-level view to Kelda’s deployment platform using the Kelda CLI, and we take care of the nitty gritty details needed to get your system up and running in your cloud of choice.
 
+    Oh, and Kelda isn’t all-or-nothing - we run great alongside any existing services you might have.
 whykelda:
   headline: Why Kelda?
   triptych:
@@ -118,7 +119,7 @@ simplifycode:
 
 tour:
   headline: Deploy & Manage Easily.
-  subhead: With Kelda, it is not just easy to get started. It is easy to keep going. Oh, and Kelda isn’t all-or-nothing — we run great alongside any existing services you might have.
+  subhead: With Kelda, it is not just easy to get started. We help you manage the deployment and keep it happy.
   steps:
     - numberid: "01"
       title: Install
@@ -179,14 +180,14 @@ tour:
 
 bottomcta:
   headline: Stay in Touch.
-  subhead: Occasionally get news about Kelda. We’d also love to hear from you. Ask us questions, give us feedback or just say ‘Hi’.
+  subhead: Get on our mailing list to occasionally get news about Kelda. We’d also love to hear from you. Ask us questions, give us feedback or just say ‘Hi’.
   actions:
     - id: email-drip
       slug: Get on our mailing list
       imagepath: "/img/mail-icon.png"
     - id: slack
       slug: Chat with us on Slack
-      linksto: "https://kelda-inc.slack.com"
+      linksto: "http://slack.kelda.io"
       imagepath: "/img/slack-icon.png"
     - id: github
       slug: Contribute on GitHub
