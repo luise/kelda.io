@@ -48,7 +48,7 @@
     max-width: calc(100% - 136px);
     overflow: hidden;
     position: relative;
-    width: 66px;
+    width: 100px;
     vertical-align: middle;
 
     @media screen and (min-width: 380px) {
@@ -63,7 +63,11 @@
     position: absolute;
     top: 0;
     transition: opacity .2s linear;
-    width: 164px;
+    width: 100px;
+
+    @media screen and (min-width: 380px) {
+      width: 164px;
+    }
   }
 
   .logo-dark {

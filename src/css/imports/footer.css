@@ -34,7 +34,11 @@
 
     .logo-light {
       height: 57px;
-      width: 164px;
+      width: 100px;
+
+      @media screen and (min-width: 380px) {
+        width: 164px;
+      }
     }
 
     p {
