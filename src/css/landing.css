@@ -60,16 +60,6 @@
           @media screen and (min-width: $tablet) {
             background: url(/img/info-circle.svg) no-repeat top right;
             padding-right: $tiny;
-
-            &:after {
-              background: $blue;
-              bottom: 3px;
-              content: '';
-              height: 2px;
-              position: absolute;
-              left: 0;
-              width: calc(100% - $tiny);
-            }
           }
         }
       }
