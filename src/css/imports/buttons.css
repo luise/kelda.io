@@ -50,15 +50,6 @@ button {
     color: white;
   }
 }
-
-.btn-secondary {
-/*  background: $lightGrey;
-  background: linear-gradient(0deg, $lighterGrey 0%, $lightGrey 100%);*/
-
-  &.smallest {
-  }
-}
-
 .btn-tertiary {
   background: none;
   border: none;
@@ -66,13 +57,9 @@ button {
   font-size: $tiny;
   font-weight: $bold;
   text-transform: uppercase;
-  /*color: $navy;*/
   padding: $micro;
   transition: color .2s ease;
 
-  &.is-checked {
-    /*color: $darkBlue;*/
-  }
 
   &:hover {
     color: $grey;
@@ -90,14 +77,9 @@ button {
 
 .btn-urgent {
   background: $grey;
-  /*background-image: linear-gradient(0deg, $grey 4%, $lighterGrey 96%);*/
   border-radius: $smallBorderRadius;
   font-weight: $bold;
   text-shadow: 0 1px 3px rgba(0,0,0,0.1);
-
-  &.smallest {
-    /*background-image: linear-gradient(0deg, $lightGrey 0%, $grey 100%);*/
-  }
 }
 
 .btn-primary,
@@ -152,7 +134,7 @@ button {
   .btn-primary {
     color: $lightGrey;
     font-weight: $black;
-    background: linear-gradient(135deg, #77ddff 0%,#c973e9 100%);
+    background: linear-gradient(135deg, $blue 0%, $purple 100%);
     transition: background .2s linear, color .2s linear;
 
     &:visited,

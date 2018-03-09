@@ -11,9 +11,9 @@ module.exports = {
   lightOrange: '#FFA054',
   orange: '#F6705D',
   pink: '#ED4264',
-  blue: '#8AC4FA',
+  blue: '#88C1F7',
   lightPurple: '#E6E3F2',
-  purple: '#8175BD',
+  purple: '#6887F7',
 
   // typography
   regular: 400,
