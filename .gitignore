@@ -2,6 +2,7 @@ dist/
 .DS_Store
 node_modules
 npm-debug.log
+package-lock.json
 .gitignore
 .package-lock.json
 **/.DS_Store
