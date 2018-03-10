@@ -56,7 +56,7 @@ whykelda:
       headline: Infrastructure as code. Real code.
       copy: No more YAML, templating, complicated CLIs, and new domain specific languages. Code your infrastructure in a familiar JavaScript API, and take advantage of functions, objects, argument validation, and all the other good stuff you already love.
     - numberid: "02"
-      headline: Hassel-free sharing.
+      headline: Hassle-free sharing.
       copy: Kelda blueprints are easily sharable with npm. Let your company experts and open source wizards write the common configuration for the applications they know the best, and simply import their blueprints like any other software library.
     - numberid: "03"
       headline: Easily compose applications.
