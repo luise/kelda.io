@@ -6,22 +6,7 @@ hero:
   btnsubtext: "Got questions? [Take a tour of Kelda →](http://docs.kelda.io/#quick-start)"
   examplecode: |
     ```js
-      // Boot virtual machines.
-      const vm = new Machine({
-        provider: 'Amazon',
-        region: 'us-west-1',
-      });
-    ```
-
-    ```js
-      // Share and reuse configurations.
-      const Redis = require('@kelda/redis');
-      // Create a Redis database with 3 workers.
-      const redis = new Redis(3, 'AUTH_PASSWORD');
-    ```
-
-    ```js
-      // Run containers.
+      // Run containers on Kubernetes.
       const app = new Container({
         name: 'appName',
         image: 'anyDockerImage',
@@ -29,7 +14,14 @@ hero:
     ```
 
     ```js
-      // Set up your secure network.
+      // Share and reuse configurations.
+      const Redis = require('@kelda/redis');
+      // Create a containerized database with 3 workers.
+      const redis = new Redis(3, 'AUTH_PASSWORD');
+    ```
+
+    ```js
+      // Set up a secure network.
       allowTraffic(publicInternet, app, 80);
     ```
 
@@ -40,6 +32,13 @@ hero:
       }
     ```
 
+    ```js
+      // Boot the underlying virtual machines.
+      const vm = new Machine({
+        provider: 'Amazon',
+        region: 'us-west-1',
+      });
+    ```
 whatiskelda:
   headline: What is Kelda?
   subhead: Kelda is a simple way to configure, run, and manage containerized applications in the cloud.
