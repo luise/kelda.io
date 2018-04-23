@@ -3,12 +3,6 @@ nav:
   - label: "Kelda"
     type: "logo"
     linksto: "/"
-  - label: "Docs"
-    type: "text"
-    linksto: "http://docs.kelda.io/"
-  - label: "GitHub"
-    type: "text"
-    linksto: "https://github.com/kelda/kelda"
   - label: "Team"
     type: "text"
     linksto: "/team"
@@ -17,16 +11,12 @@ nav:
     linksto: "/contact"
 
 footer:
-  blurb: "Kelda is a simple way to configure, run, and manage containerized applications in the cloud. Configure in Javascript and manage in the CLI."
+  blurb: "Making distributed systems delightfully simple."
   sitemap:
     - label: Home
       linksto: "/"
-    - label: GitHub
-      linksto: "https://github.com/kelda/kelda"
     - label: Meet the Team
       linksto: "/team"
-    - label: Documentation
-      linksto: "http://docs.kelda.io/"
     - label: Get in Touch
       linksto: "/contact"
 ---
