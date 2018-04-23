@@ -6,152 +6,19 @@
       <div class="hero-copy">
         <h1>{{ .Site.Data.landing.hero.headline | markdownify }}</h1>
         <h2>{{ .Site.Data.landing.hero.subhead | markdownify }}</h2>
-        <div class="npm-copy">
-          <code id="npm-code" class="btn-code" value="{{ .Site.Data.landing.hero.npmcode }}">{{ .Site.Data.landing.hero.npmcode }}</code>
-          <button class="btn-primary btn-copy" data-clipboard-target="#npm-code"><i class="copy"></i><span>Copy</span></button>
-          <p class="subtext">{{ .Site.Data.landing.hero.btnsubtext | markdownify }}</p>
-        </div>
-      </div>
-    <div class="top-code" id="top-code">
-      <div class="raw-code" id="raw-code">{{ .Site.Data.landing.hero.examplecode | markdownify }}</div>
-    </div>
-    <div class="animated-code" id="animated-code"></div>
-  </div>
-</section>
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <div id="mc_embed_signup" class="mc-form">
+        <form action="https://kelda.us17.list-manage.com/subscribe/post?u=29b1481e487451c98a20d0db3&amp;id=c1b3b8d896" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
 
-<section class="what-is-kelda">
-  <div class="container">
-    <div class="row" data-sticky-container>
-      <div class="kelda-info">
-        <div class="sticky" data-margin-top="180px">
-          <h1>{{ .Site.Data.landing.whatiskelda.headline | markdownify }}</h1>
-          <h2>{{ .Site.Data.landing.whatiskelda.subhead | markdownify }}</h2>
-          {{ .Site.Data.landing.whatiskelda.copy | markdownify }}
-        </div>
-      </div>
-      <div class="diagram">
-        <div class="layer apis"><span>Apps/APIs</span></div>
-        <div class="layer kelda"><span>Kelda</span></div>
-        <div class="layer cloud"><span>Deploy to Cloud</span></div>
-        <div class="gradient"></div>
-        <img height="2328" width="1023" src="/img/diagram.png"/>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="why-kelda">
-  <div class="container">
-    <div class="row">
-      <h1>{{ .Site.Data.landing.whykelda.headline | markdownify }}</h1>
-    </div>
-    <div class="row">
-      {{ range .Site.Data.landing.whykelda.triptych }}
-        <article class="third">
-          <div class="section-number">
-            <img src="/img/why-kelda-{{ .numberid }}.svg"/>{{ .numberid }}
-          </div>
-          <strong>{{ .headline | markdownify }}</strong>
-          <p>{{ .copy | markdownify }}</p>
-        </article>
-      {{ end }}
-    </div>
-  </div>
-</section>
-
-<section class="simplify-code">
-  <div class="container">
-    <div class="row">
-      <h1>{{ .Site.Data.landing.simplifycode.headline | markdownify }}</h1>
-      <h2>{{ .Site.Data.landing.simplifycode.subhead | markdownify }}</h2>
-    </div>
-  </div>
-  <div class="container code-comparison">
-    <div class="row">
-      <div class="left half">
-        <div class="label clearfix">
-          <img src="{{ .Site.Data.landing.simplifycode.code.before.imagepath }}"/>
-          <p>
-            <strong>{{ .Site.Data.landing.simplifycode.code.before.label }}</strong>
-            <em>{{ .Site.Data.landing.simplifycode.code.before.filename }}</em>
-          </p>
-        </div>
-        {{ .Site.Data.landing.simplifycode.code.before.snippet | markdownify }}
-      </div>
-      <div class="right half">
-        <div class="label clearfix">
-          <img height="66" width="66" src="{{ .Site.Data.landing.simplifycode.code.withkelda.imagepath }}"/>
-          <p>
-            <strong>{{ .Site.Data.landing.simplifycode.code.withkelda.label }}</strong>
-            <em>{{ .Site.Data.landing.simplifycode.code.withkelda.filename }}</em>
-          </p>
-        </div>
-        {{ .Site.Data.landing.simplifycode.code.withkelda.snippet | markdownify }}
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="tour">
-  <div class="container">
-    <div class="row">
-      <h1>{{ .Site.Data.landing.tour.headline | markdownify }}</h1>
-      <h2>{{ .Site.Data.landing.tour.subhead | markdownify }}</h2>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="steps slider">
-        {{ range .Site.Data.landing.tour.steps }}
-          <div class="step {{ .title | urlize }}">
-            <div class="code light-code">{{ .code | markdownify }}</div>
-            <div class="action-bar">
-              <p>{{ .headline }}</p>
-              <button class="btn-primary next">Next</button>
+        	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_29b1481e487451c98a20d0db3_c1b3b8d896" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-primary"></div>
             </div>
-          </div>
-        {{ end }}
+        </form>
+        </div>
       </div>
-      <nav>
-        {{ range .Site.Data.landing.tour.steps }}
-          <button class="btn-tour">{{ .title }}<span>{{ .numberid }}</span></button>
-        {{ end }}
-        <hr/>
-        <a href="{{ .Site.Data.landing.tour.cta.linksto }}" class="text-link">{{ .Site.Data.landing.tour.cta.copy }}</a>
-      </nav>
-    </div>
-  </div>
-</section>
-
-<section class="bottom-cta">
-  <div class="container">
-    <div class="row">
-      <div class="copy">
-        <h1>{{ .Site.Data.landing.bottomcta.headline | markdownify }}</h1>
-        <h2>{{ .Site.Data.landing.bottomcta.subhead | markdownify }}</h2>
-      </div>
-      <div class="actions">
-        {{ range .Site.Data.landing.bottomcta.actions }}
-          {{ if eq .id "email-drip" }}
-            <div class="btn-icon {{ .id }}">
-              <div class="cover"><img src="{{ .imagepath }}"/></div>
-              <div id="mc_embed_signup" class="mc-form">
-                <form action="https://kelda.us17.list-manage.com/subscribe/post?u=29b1481e487451c98a20d0db3&amp;id=c1b3b8d896" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <div id="mc_embed_signup_scroll">
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your Email" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_29b1481e487451c98a20d0db3_c1b3b8d896" tabindex="-1" value=""></div><input type="submit" value="→" name="subscribe" id="mc-embedded-subscribe" class="btn-primary">
-                  </div>
-                </form>
-              </div>
-              {{ .slug }}
-            </div>
-          {{ else }}
-            <a href="{{ .linksto }}" class="btn-icon {{ .id }}"><img src="{{ .imagepath }}"/>{{ .slug }}</a>
-          {{ end }}
-        {{ end }}
-      </div>
-    </div>
   </div>
 </section>
 
