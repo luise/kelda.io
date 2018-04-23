@@ -14,17 +14,17 @@ function atTop() {
   }
 }
 
-function brightenHeader() {
-  if (atTop()) {
-    $('#header').removeClass('light');
-  } else {
-    $('#header').addClass('light');
-  }
-}
-
-brightenHeader();
-
-$(window).on('scroll', brightenHeader);
+// function brightenHeader() {
+//   if (atTop()) {
+//     $('#header').removeClass('light');
+//   } else {
+//     $('#header').addClass('light');
+//   }
+// }
+//
+// brightenHeader();
+//
+// $(window).on('scroll', brightenHeader);
 
 // homepage code
 if ($('.landing').length) {

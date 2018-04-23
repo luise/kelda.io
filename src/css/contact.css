@@ -33,14 +33,6 @@
   }
 
   .hero {
-    background-color: $lightGrey;
-    background: $lightGrey url(/img/hero-bg.jpg) no-repeat bottom center;
-    $doubleDensity {
-      background: $lightGrey url(/img/hero-bg@2x.jpg) no-repeat bottom center;
-    }
-    $tripleDensity {
-      background: $lightGrey url(/img/hero-bg@3x.jpg) no-repeat bottom center;
-    }
     background-size: contain;
     padding-bottom: $large;
     position: relative;
@@ -78,7 +70,7 @@
     }
 
     h1 {
-      color: white;
+      color: $darkGrey;
       text-align: center;
       width: 100%;
 
@@ -108,7 +100,7 @@
     textarea,
     input::placeholder,
     textarea::placeholder {
-      color: white;
+      color: $darkGrey;
     }
 
     input,

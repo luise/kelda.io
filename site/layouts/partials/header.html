@@ -39,7 +39,7 @@
       <nav class="clearfix">
         {{ range .Site.Data.global.nav }}
           <a href='{{ .linksto }}' class='{{ if eq .type "logo" }}logo{{ else if eq .type "text"}}nav-link{{ else if eq .type "cta" }}btn-primary{{ end }} {{ .label | urlize }}
-          '>{{ if eq .type "logo" }}<img class="logo-dark" src="/img/logo-dark.svg" alt="Kelda"/><img class="logo-light" src="/img/logo-light.svg" alt="Kelda"/>{{ end }}{{ .label }}</a>
+          '>{{ if eq .type "logo" }}<img class="logo-dark" src="/img/logo-light.svg" alt="Kelda"/><img class="logo-light" src="/img/logo-light.svg" alt="Kelda"/>{{ end }}{{ .label }}</a>
         {{ end }}
       </nav>
     </header>

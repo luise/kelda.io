@@ -1,18 +1,10 @@
 .landing {
 
   .hero {
-    background-color: $lightGrey;
-    background: $lightGrey url(/img/hero-bg.jpg) no-repeat bottom center;
-    $doubleDensity {
-      background: $lightGrey url(/img/hero-bg@2x.jpg) no-repeat bottom center;
-    }
-    $tripleDensity {
-      background: $lightGrey url(/img/hero-bg@3x.jpg) no-repeat bottom center;
-    }
+    min-height: 100vh;
     background-size: contain;
     padding: 0 $small;
     position: relative;
-    min-height: 732px;
     z-index: 3;
 
     @media screen and (min-width: $tablet) {
@@ -40,7 +32,7 @@
 
       h1,
       h2 {
-        color: white;
+        color: $darkGrey;
       }
 
       h1 {
